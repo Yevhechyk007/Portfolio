@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yevhen Ivasiuk — UI/UX Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo" onclick="showMain(); return false;">Yevhen Ivasiuk</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" onclick="showMain(); closeMenu();">About</a></li>
+    <li><a href="#projects" onclick="showMain(); closeMenu();">Projects</a></li>
+    <li><a href="#contact" onclick="showMain(); closeMenu();">Contact</a></li>
+  </ul>
+  <button class="nav-menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══════════ MAIN CONTENT ═══════════ -->
+<div id="mainContent">
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-name">Yevhen Ivasiuk — UI/UX Designer</p>
+  <h1>Portfolio</h1>
+  <p class="hero-role">Crafting clean, usable and visually strong interfaces. Design systems, landing pages, and web applications.</p>
+  <div class="hero-cta">
+    <a href="#projects" class="btn btn-primary">View Projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
+    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label reveal">01 — About</p>
+  <h2 class="section-title reveal">Designing interfaces<br>that actually work</h2>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>UX/UI Designer with a strong UI sense and solid UX foundations. I focus on creating clean, usable, and visually strong interfaces for real products.</p>
+      <p>Experienced in designing landing pages and web applications, working with developers and PMs, and building scalable design systems in Figma.</p>
+      <p>Currently studying Computer Science at the University of Łódź and constantly expanding my design toolkit.</p>
+    </div>
+    <div class="about-details reveal">
+      <div class="detail-block">
+        <h4>Location</h4>
+        <p>Łódź, Poland</p>
+      </div>
+      <div class="detail-block">
+        <h4>Tools</h4>
+        <div class="skills-tags">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Recraft</span>
+          <span class="skill-tag">Jira</span>
+          <span class="skill-tag">Sora</span>
+          <span class="skill-tag">Claude</span>
+        </div>
+      </div>
+      <div class="detail-block">
+        <h4>Skills</h4>
+        <div class="skills-tags">
+          <span class="skill-tag">Wireframing</span>
+          <span class="skill-tag">Prototyping</span>
+          <span class="skill-tag">User Research</span>
+          <span class="skill-tag">UI Design</span>
+          <span class="skill-tag">Auto Layout</span>
+          <span class="skill-tag">Design Systems</span>
+          <span class="skill-tag">Visual Hierarchy</span>
+          <span class="skill-tag">Typography</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS — CATEGORIES -->
+<section id="projects">
+  <p class="section-label reveal">02 — Projects</p>
+  <h2 class="section-title reveal">Selected work</h2>
+  <div class="categories-grid">
+
+    <div class="category-card reveal" onclick="openCategory('mobile')">
+      <div class="category-thumb">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/0c8b9c242541991.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png" alt="Mobile Apps">
+      </div>
+      <div class="category-info">
+        <p class="category-count">1 project</p>
+        <h3>Mobile Apps</h3>
+        <span class="category-arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </div>
+
+    <div class="category-card reveal" onclick="openCategory('landings')">
+      <div class="category-thumb">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/b3541b234177133.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Landing Pages">
+      </div>
+      <div class="category-info">
+        <p class="category-count">4 projects</p>
+        <h3>Landing Pages</h3>
+        <span class="category-arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </div>
+
+    <div class="category-card reveal" onclick="openCategory('ui')">
+      <div class="category-thumb">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/3bc31e231633043.Y3JvcCwxNDQwLDExMjYsMCwyMzE.jpg" alt="UI Components">
+      </div>
+      <div class="category-info">
+        <p class="category-count">2 projects</p>
+        <h3>UI Components</h3>
+        <span class="category-arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EDUCATION -->
+<section>
+  <p class="section-label reveal">03 — Education</p>
+  <h2 class="section-title reveal">Background</h2>
+  <div class="edu-grid">
+    <div class="edu-card reveal">
+      <h3>University of Łódź</h3>
+      <p class="edu-field">Computer Science</p>
+      <p class="edu-year">2023 — Present</p>
+    </div>
+    <div class="edu-card reveal">
+      <h3>IT Step Academy</h3>
+      <p class="edu-field">UX/UI Design</p>
+      <p class="edu-year">Jun 2025 — Jan 2026</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <p class="section-label reveal">04 — Contact</p>
+  <h2 class="section-title reveal">Let's work together</h2>
+  <p class="contact-desc reveal">Have a project in mind or just want to say hello? I'm always open to new opportunities and collaborations.</p>
+  <div class="contact-links reveal">
+    <a href="mailto:yevhen.ivasiuk1@gmail.com" class="contact-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg> Email</a>
+    <a href="https://t.me/yevhenchykk" target="_blank" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.66-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.37-.49 1.02-.74 3.99-1.74 6.65-2.88 7.98-3.44 3.8-1.58 4.59-1.86 5.1-1.87.11 0 .37.03.53.17.14.12.18.28.2.45-.01.06.01.24 0 .37z"/></svg> Telegram</a>
+    <a href="https://www.behance.net/yevhenivasiuk_" target="_blank" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 11c1.38 0 2.5-1.12 2.5-2.5S8.88 6 7.5 6H3v5h4.5zm0-3.5c.55 0 1 .45 1 1s-.45 1-1 1H5V7.5h2.5zM3 18h5c1.38 0 2.5-1.12 2.5-2.5 0-1.03-.63-1.92-1.52-2.3.55-.46.92-1.14.92-1.9H3v6.7zm2-4.5h3c.55 0 1 .45 1 1s-.45 1-1 1H5v-2zM15 6h6v1.5h-6zM21 16.5c0 2.49-2.01 4.5-4.5 4.5S12 18.99 12 16.5 14.01 12 16.5 12s4.5 2.01 4.5 4.5zm-2.12-.63c-.34-.77-1.1-1.31-1.98-1.31-1.2 0-2.17.97-2.17 2.17 0 .18.02.35.06.52h4.25c.02-.12.03-.25.03-.38 0-.35-.07-.7-.19-1z"/></svg> Behance</a>
+    <a href="https://www.linkedin.com/in/yevhen-ivasiuk-042383344/" target="_blank" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg> LinkedIn</a>
+    <a href="https://dribbble.com/evgen-ivasyuk" target="_blank" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.424 25.424 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.245.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"/></svg> Dribbble</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Yevhen Ivasiuk. Designed with care.</p>
+</footer>
+
+</div><!-- /mainContent -->
+
+<!-- ═══════════ CATEGORY PAGES ═══════════ -->
+
+<!-- MOBILE APPS -->
+<div class="category-page" id="cat-mobile">
+  <button class="back-btn" onclick="closeCategory()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12L12 19M5 12L12 5"/></svg>
+    Back to Projects
+  </button>
+  <h2 class="category-page-title">Mobile Apps</h2>
+  <div class="category-projects-grid single">
+    <a href="https://www.behance.net/gallery/242541991/Frame-Personal-Finance-App" target="_blank" class="project-card">
+      <div class="project-cover">
+        <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/0c8b9c242541991.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png" alt="Frame">
+      </div>
+      <div class="project-info">
+        <h3>Frame — Personal Finance App</h3>
+        <p class="project-type">Mobile App · UX/UI Design</p>
+        <p class="project-desc">Personal finance mobile application helping users manage expenses and track budgets. User flows, wireframes, and high-fidelity UI screens with an interactive prototype.</p>
+        <div class="project-stats">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 12</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 68</span>
+        </div>
+        <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- LANDING PAGES -->
+<div class="category-page" id="cat-landings">
+  <button class="back-btn" onclick="closeCategory()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12L12 19M5 12L12 5"/></svg>
+    Back to Projects
+  </button>
+  <h2 class="category-page-title">Landing Pages</h2>
+  <div class="category-projects-grid">
+    <a href="https://www.behance.net/gallery/241408847/ZEUS-iGaming-Landing" target="_blank" class="project-card">
+      <div class="project-cover"><img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/e8a112241408847.Y3JvcCwxMTkzLDkzMyw1Niww.jpg" alt="ZEUS"></div>
+      <div class="project-info">
+        <h3>ZEUS — iGaming Landing</h3>
+        <p class="project-type">Landing Page · Web Design</p>
+        <div class="project-stats">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 6</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 58</span>
+        </div>
+        <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </a>
+    <a href="https://www.behance.net/gallery/240427803/Aivora-Landing-Page-(Web-Mobile)" target="_blank" class="project-card">
+      <div class="project-cover"><img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/49e3e6240427803.Y3JvcCwxMjU1LDk4MiwxMzksMjE.jpg" alt="Aivora"></div>
+      <div class="project-info">
+        <h3>Aivora — Landing Page</h3>
+        <p class="project-type">Landing Page · Web & Mobile</p>
+        <div class="project-stats">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 10</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 58</span>
+        </div>
+        <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </a>
+    <a href="https://www.behance.net/gallery/238305659/MOMU-Landing-Museum-of-Modern-Visions" target="_blank" class="project-card">
+      <div class="project-cover"><img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/ab4569238305659.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="MOMU"></div>
+      <div class="project-info">
+        <h3>MOMU — Museum of Modern Visions</h3>
+        <p class="project-type">Landing Page · Web Design</p>
+        <div class="project-stats">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 8</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 67</span>
+        </div>
+        <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </a>
+    <a href="https://www.behance.net/gallery/234177133/Teethly-Modern-Dental-Clinic-LangingPage" target="_blank" class="project-card">
+      <div class="project-cover"><img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/b3541b234177133.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Teethly"></div>
+      <div class="project-info">
+        <h3>Teethly — Modern Dental Clinic</h3>
+        <p class="project-type">Landing Page · Web Design</p>
+        <div class="project-stats">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 31</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 147</span>
+        </div>
+        <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- UI COMPONENTS -->
+<div class="category-page" id="cat-ui">
+  <button class="back-btn" onclick="closeCategory()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12L12 19M5 12L12 5"/></svg>
+    Back to Projects
+  </button>
+  <h2 class="category-page-title">UI Components</h2>
+  <div class="category-projects-grid">
+    <a href="https://www.behance.net/gallery/231633043/Subscription-Pricing-Page-Minimal-Green-Layout" target="_blank" class="project-card">
+      <div class="project-cover"><img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/3bc31e231633043.Y3JvcCwxNDQwLDExMjYsMCwyMzE.jpg" alt="Subscription Pricing"></div>
+      <div class="project-info">
+        <h3>Subscription Pricing Page</h3>
+        <p class="project-type">UI Design · Web</p>
+        <div class="project-stats">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 2</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 99</span>
+        </div>
+        <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </a>
+    <a href="https://www.behance.net/gallery/231632383/Pricing-Page-UI-Design" target="_blank" class="project-card">
+      <div class="project-cover"><img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/129417231632383.Y3JvcCwxMzUxLDEwNTcsNDMsMA.jpg" alt="Pricing Page"></div>
+      <div class="project-info">
+        <h3>Pricing Page — UI Design</h3>
+        <p class="project-type">UI Design · Web</p>
+        <div class="project-stats">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 3</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 55</span>
+        </div>
+        <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
