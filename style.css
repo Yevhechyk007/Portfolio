@@ -450,6 +450,105 @@ footer {
   border-top: 1px solid var(--border);
 }
 
+/* ── CURRENTLY WORKING ON ── */
+.wip-intro {
+  font-size: 0.95rem;
+  color: var(--fg-secondary);
+  line-height: 1.7;
+  margin-top: -28px;
+  margin-bottom: 40px;
+  max-width: 580px;
+}
+
+.wip-grid {
+  max-width: 480px;
+}
+
+.nda-card { cursor: default; }
+.nda-card:hover { transform: translateY(-3px); }
+
+.nda-placeholder {
+  background: linear-gradient(135deg, #111 0%, #222 55%, #181818 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nda-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 38%, rgba(140,140,140,0.1) 0%, transparent 65%);
+}
+
+.nda-placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.nda-lock-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.nda-label-text {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  font-family: var(--font);
+}
+
+.nda-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--fg-secondary);
+  margin-bottom: 14px;
+}
+
+.nda-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.nda-meta-row {
+  display: flex;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: var(--fg);
+}
+
+.nda-meta-label {
+  color: var(--fg-secondary);
+  min-width: 72px;
+  font-weight: 500;
+  font-size: 0.76rem;
+}
+
+.nda-footer-text {
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--fg-secondary);
+}
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
