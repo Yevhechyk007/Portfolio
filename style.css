@@ -23,7 +23,7 @@ body {
 
 ::selection { background: var(--fg); color: var(--bg); }
 
-/* ── NAV ── */
+/* NAV */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -76,6 +76,7 @@ nav {
   display: none;
   background: none; border: none; cursor: pointer;
   width: 26px; height: 18px; position: relative;
+  z-index: 210;
 }
 
 .nav-menu-btn span {
@@ -88,7 +89,11 @@ nav {
 .nav-menu-btn span:nth-child(2) { top: 8px; }
 .nav-menu-btn span:nth-child(3) { top: 16px; }
 
-/* ── HERO ── */
+.nav-menu-btn.active span:nth-child(1) { top: 8px; transform: rotate(45deg); }
+.nav-menu-btn.active span:nth-child(2) { opacity: 0; }
+.nav-menu-btn.active span:nth-child(3) { top: 8px; transform: rotate(-45deg); }
+
+/* HERO */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -165,7 +170,7 @@ nav {
   100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
-/* ── SECTIONS ── */
+/* SECTIONS */
 section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
 
 .section-label {
@@ -182,7 +187,7 @@ section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
 
 .divider { width: 100%; height: 1px; background: var(--border); margin: 0 auto; max-width: var(--max-w); }
 
-/* ── ABOUT ── */
+/* ABOUT */
 .about-grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 72px; align-items: start;
@@ -208,7 +213,7 @@ section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
 }
 .skill-tag:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
 
-/* ── CATEGORY CARDS ── */
+/* CATEGORY CARDS */
 .categories-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -243,6 +248,11 @@ section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.category-card:focus-visible {
+  outline: 3px solid var(--fg);
+  outline-offset: 4px;
 }
 
 .category-thumb {
@@ -290,7 +300,7 @@ section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
 .category-card:hover .category-arrow { gap: 10px; color: #fff; }
 .category-arrow svg { width: 14px; height: 14px; }
 
-/* ── CATEGORY PAGE (hidden by default) ── */
+/* CATEGORY PAGE */
 .category-page {
   display: none;
   padding: 96px 40px;
@@ -331,7 +341,7 @@ section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
   gap: 20px;
 }
 
-/* ── PROJECT CARDS (inside category) ── */
+/* PROJECT CARDS */
 .project-card {
   background: var(--card-bg);
   border-radius: var(--radius);
@@ -405,7 +415,7 @@ section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
   max-width: 530px;
 }
 
-/* ── EDUCATION ── */
+/* EDUCATION */
 .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 
 .edu-card {
@@ -418,7 +428,7 @@ section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
 .edu-card .edu-field { font-size: 0.9rem; color: var(--fg-secondary); margin-bottom: 8px; }
 .edu-card .edu-year { font-size: 0.76rem; color: var(--fg-secondary); opacity: 0.7; }
 
-/* ── CONTACT ── */
+/* CONTACT */
 .contact-section { text-align: center; padding: 112px 40px; }
 .contact-section .section-title { margin-bottom: 16px; }
 
@@ -450,7 +460,7 @@ footer {
   border-top: 1px solid var(--border);
 }
 
-/* ── CURRENTLY WORKING ON ── */
+/* CURRENTLY WORKING ON */
 .wip-intro {
   font-size: 0.95rem;
   color: var(--fg-secondary);
@@ -492,8 +502,14 @@ footer {
 }
 
 .nda-lock-icon {
-  font-size: 2.2rem;
-  line-height: 1;
+  width: 46px;
+  height: 46px;
+  color: rgba(255,255,255,0.72);
+}
+
+.nda-lock-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .nda-label-text {
@@ -560,7 +576,7 @@ footer {
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   nav { padding: 14px 20px; }
   .nav-links { display: none; }

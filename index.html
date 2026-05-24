@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yevhen Ivasiuk — UI/UX Designer</title>
+<title>Yevhen Ivasiuk - UI/UX Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -17,17 +17,17 @@
     <li><a href="#projects" onclick="showMain(); closeMenu();">Projects</a></li>
     <li><a href="#contact" onclick="showMain(); closeMenu();">Contact</a></li>
   </ul>
-  <button class="nav-menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menu">
+  <button class="nav-menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- ═══════════ MAIN CONTENT ═══════════ -->
+<!-- MAIN CONTENT -->
 <div id="mainContent">
 
 <!-- HERO -->
 <section class="hero">
-  <p class="hero-name">Yevhen Ivasiuk — UI/UX Designer</p>
+  <p class="hero-name">Yevhen Ivasiuk - UI/UX Designer</p>
   <h1>Portfolio</h1>
   <p class="hero-role">Crafting clean, usable and visually strong interfaces. Design systems, landing pages, and web applications.</p>
   <div class="hero-cta">
@@ -41,18 +41,18 @@
 
 <!-- ABOUT -->
 <section id="about">
-  <p class="section-label reveal">01 — About</p>
+  <p class="section-label reveal">01 - About</p>
   <h2 class="section-title reveal">Designing interfaces<br>that actually work</h2>
   <div class="about-grid">
     <div class="about-text reveal">
       <p>UX/UI Designer with a strong UI sense and solid UX foundations. I focus on creating clean, usable, and visually strong interfaces for real products.</p>
       <p>Experienced in designing landing pages and web applications, working with developers and PMs, and building scalable design systems in Figma.</p>
-      <p>Currently studying Computer Science at the University of Łódź and constantly expanding my design toolkit.</p>
+      <p>Currently studying Computer Science at the University of Lodz and constantly expanding my design toolkit.</p>
     </div>
     <div class="about-details reveal">
       <div class="detail-block">
         <h4>Location</h4>
-        <p>Łódź, Poland</p>
+        <p>Lodz, Poland</p>
       </div>
       <div class="detail-block">
         <h4>Tools</h4>
@@ -83,13 +83,13 @@
 
 <div class="divider"></div>
 
-<!-- PROJECTS — CATEGORIES -->
+<!-- PROJECT CATEGORIES -->
 <section id="projects">
-  <p class="section-label reveal">02 — Projects</p>
+  <p class="section-label reveal">02 - Projects</p>
   <h2 class="section-title reveal">Selected work</h2>
   <div class="categories-grid">
 
-    <div class="category-card reveal" onclick="openCategory('mobile')">
+    <div class="category-card reveal" role="button" tabindex="0" onclick="openCategory('mobile')" onkeydown="openCategoryFromKeyboard(event, 'mobile')" aria-label="Open Mobile Apps projects">
       <div class="category-thumb">
         <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/0c8b9c242541991.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png" alt="Mobile Apps">
       </div>
@@ -100,7 +100,7 @@
       </div>
     </div>
 
-    <div class="category-card reveal" onclick="openCategory('landings')">
+    <div class="category-card reveal" role="button" tabindex="0" onclick="openCategory('landings')" onkeydown="openCategoryFromKeyboard(event, 'landings')" aria-label="Open Landing Pages projects">
       <div class="category-thumb">
         <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/49e3e6240427803.Y3JvcCwxMjU1LDk4MiwxMzksMjE.jpg" alt="Landing Pages">
       </div>
@@ -111,7 +111,7 @@
       </div>
     </div>
 
-    <div class="category-card reveal" onclick="openCategory('templates')">
+    <div class="category-card reveal" role="button" tabindex="0" onclick="openCategory('templates')" onkeydown="openCategoryFromKeyboard(event, 'templates')" aria-label="Open Templates projects">
       <div class="category-thumb">
         <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8074f5247563351.Y3JvcCwzMzY2LDI2MzMsMjQxLDA.jpg" alt="Templates">
       </div>
@@ -130,25 +130,30 @@
 
 <!-- CURRENTLY WORKING ON -->
 <section id="currently-working-on">
-  <p class="section-label reveal">03 — Currently Working On</p>
+  <p class="section-label reveal">03 - Currently Working On</p>
   <h2 class="section-title reveal">Recent product work</h2>
   <p class="wip-intro reveal">Recent product work currently under NDA. Case studies will be published after public release.</p>
   <div class="wip-grid">
     <div class="project-card nda-card reveal">
       <div class="project-cover nda-placeholder">
         <div class="nda-placeholder-inner">
-          <span class="nda-lock-icon">🔒</span>
+          <span class="nda-lock-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+              <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
+            </svg>
+          </span>
           <span class="nda-label-text">NDA</span>
         </div>
       </div>
       <div class="project-info">
-        <span class="nda-tag">🔒 NDA until Q3 2026</span>
+        <span class="nda-tag">NDA until Q3 2026</span>
         <h3>Lifestyle &amp; Productivity App</h3>
-        <p class="project-type">Mobile Product · Design System</p>
+        <p class="project-type">Mobile Product / Design System</p>
         <p class="project-desc">Built a comprehensive UI Kit and design system from scratch. Implemented Figma Variables for typography, colors, and effects. Designed an interactive dashboard with complex gradient system.</p>
         <div class="nda-meta">
           <div class="nda-meta-row"><span class="nda-meta-label">Role</span><span>UI/UX Designer</span></div>
-          <div class="nda-meta-row"><span class="nda-meta-label">Timeline</span><span>Mar 2026 – Apr 2026</span></div>
+          <div class="nda-meta-row"><span class="nda-meta-label">Timeline</span><span>Mar 2026 - Apr 2026</span></div>
           <div class="nda-meta-row"><span class="nda-meta-label">Status</span><span>In final development, launch planned Q3 2026</span></div>
         </div>
         <p class="nda-footer-text">Reach out for more details under NDA</p>
@@ -161,18 +166,18 @@
 
 <!-- EDUCATION -->
 <section>
-  <p class="section-label reveal">04 — Education</p>
+  <p class="section-label reveal">04 - Education</p>
   <h2 class="section-title reveal">Background</h2>
   <div class="edu-grid">
     <div class="edu-card reveal">
-      <h3>University of Łódź</h3>
+      <h3>University of Lodz</h3>
       <p class="edu-field">Computer Science</p>
-      <p class="edu-year">2023 — Present</p>
+      <p class="edu-year">2023 - Present</p>
     </div>
     <div class="edu-card reveal">
       <h3>IT Step Academy</h3>
       <p class="edu-field">UX/UI Design</p>
-      <p class="edu-year">Jun 2025 — Jan 2026</p>
+      <p class="edu-year">Jun 2025 - Jan 2026</p>
     </div>
   </div>
 </section>
@@ -181,7 +186,7 @@
 
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
-  <p class="section-label reveal">05 — Contact</p>
+  <p class="section-label reveal">05 - Contact</p>
   <h2 class="section-title reveal">Let's work together</h2>
   <p class="contact-desc reveal">Have a project in mind or just want to say hello? I'm always open to new opportunities and collaborations.</p>
   <div class="contact-links reveal">
@@ -194,12 +199,12 @@
 </section>
 
 <footer>
-  <p>© 2026 Yevhen Ivasiuk. Designed with care.</p>
+  <p>&copy; 2026 Yevhen Ivasiuk. Designed with care.</p>
 </footer>
 
 </div><!-- /mainContent -->
 
-<!-- ═══════════ CATEGORY PAGES ═══════════ -->
+<!-- CATEGORY PAGES -->
 
 <!-- MOBILE APPS -->
 <div class="category-page" id="cat-mobile">
@@ -214,9 +219,9 @@
         <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/0c8b9c242541991.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png" alt="Frame">
       </div>
       <div class="project-info">
-        <h3>Frame — Personal Finance App</h3>
-        <p class="project-type">Mobile App · UX/UI Design</p>
-        <p class="project-desc">A minimalist mobile app designed to make budget tracking feel effortless — built around clear visual hierarchy and a quick-entry flow.</p>
+        <h3>Frame - Personal Finance App</h3>
+        <p class="project-type">Mobile App / UX/UI Design</p>
+        <p class="project-desc">A minimalist mobile app designed to make budget tracking feel effortless - built around clear visual hierarchy and a quick-entry flow.</p>
         <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
     </a>
@@ -234,26 +239,26 @@
     <a href="https://www.behance.net/gallery/241408847/ZEUS-iGaming-Landing" target="_blank" class="project-card">
       <div class="project-cover"><img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/e8a112241408847.Y3JvcCwxMTkzLDkzMyw1Niww.jpg" alt="ZEUS"></div>
       <div class="project-info">
-        <h3>ZEUS — iGaming Landing</h3>
-        <p class="project-type">Landing Page · Web Design</p>
-        <p class="project-desc">A personal concept project — visual exploration of dark aesthetics, bold typography, and dramatic hierarchy.</p>
+        <h3>ZEUS - iGaming Landing</h3>
+        <p class="project-type">Landing Page / Web Design</p>
+        <p class="project-desc">A personal concept project - visual exploration of dark aesthetics, bold typography, and dramatic hierarchy.</p>
         <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
     </a>
     <a href="https://www.behance.net/gallery/240427803/Aivora-Landing-Page-(Web-Mobile)" target="_blank" class="project-card">
       <div class="project-cover"><img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/49e3e6240427803.Y3JvcCwxMjU1LDk4MiwxMzksMjE.jpg" alt="Aivora"></div>
       <div class="project-info">
-        <h3>Aivora — Landing Page</h3>
-        <p class="project-type">Landing Page · Web & Mobile</p>
-        <p class="project-desc">A responsive SaaS landing page with a dual web/mobile system — focused on clarity, conversion, and consistent visual language across breakpoints.</p>
+        <h3>Aivora - Landing Page</h3>
+        <p class="project-type">Landing Page / Web & Mobile</p>
+        <p class="project-desc">A responsive SaaS landing page with a dual web/mobile system - focused on clarity, conversion, and consistent visual language across breakpoints.</p>
         <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
     </a>
     <a href="https://www.behance.net/gallery/238305659/MOMU-Landing-Museum-of-Modern-Visions" target="_blank" class="project-card">
       <div class="project-cover"><img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/ab4569238305659.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="MOMU"></div>
       <div class="project-info">
-        <h3>MOMU — Museum of Modern Visions</h3>
-        <p class="project-type">Landing Page · Web Design</p>
+        <h3>MOMU - Museum of Modern Visions</h3>
+        <p class="project-type">Landing Page / Web Design</p>
         <p class="project-desc">A cultural landing page exploring how modern art institutions can feel contemporary and editorial rather than formal.</p>
         <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
@@ -261,9 +266,9 @@
     <a href="https://www.behance.net/gallery/234177133/Teethly-Modern-Dental-Clinic-LangingPage" target="_blank" class="project-card">
       <div class="project-cover"><img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/b3541b234177133.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Teethly"></div>
       <div class="project-info">
-        <h3>Teethly — Modern Dental Clinic</h3>
-        <p class="project-type">Landing Page · Web Design</p>
-        <p class="project-desc">A dental clinic landing that rethinks medical branding — using warm typography and softened imagery to feel premium instead of clinical.</p>
+        <h3>Teethly - Modern Dental Clinic</h3>
+        <p class="project-type">Landing Page / Web Design</p>
+        <p class="project-desc">A dental clinic landing that rethinks medical branding - using warm typography and softened imagery to feel premium instead of clinical.</p>
         <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
     </a>
@@ -285,7 +290,7 @@
       </div>
       <div class="project-info">
         <h3>MATRIC</h3>
-        <p class="project-type">MATRIC · UX/UI Design</p>
+        <p class="project-type">MATRIC / UX/UI Design</p>
         <p class="project-desc">A business pitch deck template focused on data readability and modern, minimal slide structure.</p>
         <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
