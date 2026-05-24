@@ -29,11 +29,21 @@ function closeMenu() {
 }
 
 // Category pages
-function openCategory(id) {
+const categoryIds = ['mobile', 'landings', 'posters', 'templates'];
+
+function showCategory(id, shouldScroll = true) {
   document.getElementById('mainContent').style.display = 'none';
   document.querySelectorAll('.category-page').forEach(p => p.classList.remove('active'));
-  document.getElementById('cat-' + id).classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.getElementById('cat-' + id)?.classList.add('active');
+
+  if (shouldScroll) {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function openCategory(id) {
+  showCategory(id);
+  history.pushState({ category: id }, '', '#' + id);
 }
 
 function openCategoryFromKeyboard(event, id) {
@@ -43,14 +53,43 @@ function openCategoryFromKeyboard(event, id) {
 }
 
 function closeCategory() {
-  document.querySelectorAll('.category-page').forEach(p => p.classList.remove('active'));
-  document.getElementById('mainContent').style.display = 'block';
-  setTimeout(() => {
-    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-  }, 50);
+  if (history.state?.category) {
+    history.replaceState({ main: true }, '', window.location.pathname + window.location.search + '#projects');
+  }
+  showMain(true);
 }
 
-function showMain() {
+function showMain(scrollToProjects = false) {
   document.querySelectorAll('.category-page').forEach(p => p.classList.remove('active'));
   document.getElementById('mainContent').style.display = 'block';
+
+  if (scrollToProjects) {
+    setTimeout(() => {
+      document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+    }, 50);
+  }
 }
+
+window.addEventListener('popstate', () => {
+  const id = window.location.hash.replace('#', '');
+
+  if (categoryIds.includes(id)) {
+    showCategory(id, false);
+    return;
+  }
+
+  showMain(id === 'projects');
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  const id = window.location.hash.replace('#', '');
+
+  if (categoryIds.includes(id)) {
+    history.replaceState({ main: true }, '', window.location.pathname + window.location.search + '#projects');
+    history.pushState({ category: id }, '', '#' + id);
+    showCategory(id, false);
+    return;
+  }
+
+  history.replaceState({ main: true }, '', window.location.href);
+});
