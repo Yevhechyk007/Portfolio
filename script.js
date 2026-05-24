@@ -83,6 +83,28 @@ function closePoster() {
   showCategory('posters');
 }
 
+function openImageModal(src, alt) {
+  const modal = document.getElementById('imageModal');
+  const image = document.getElementById('imageModalImg');
+
+  image.src = src;
+  image.alt = alt;
+  modal.classList.add('active');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeImageModal() {
+  const modal = document.getElementById('imageModal');
+  const image = document.getElementById('imageModalImg');
+
+  modal.classList.remove('active');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  image.src = '';
+  image.alt = '';
+}
+
 function closeCategory() {
   if (history.state?.category) {
     history.replaceState({ main: true }, '', window.location.pathname + window.location.search + '#projects');
@@ -136,4 +158,10 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   history.replaceState({ main: true }, '', window.location.href);
+});
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeImageModal();
+  }
 });

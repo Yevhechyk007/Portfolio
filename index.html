@@ -329,7 +329,9 @@
   </button>
   <div class="poster-detail-layout">
     <div class="poster-detail-art">
-      <img src="assets/posters/inner-noise.jpg" alt="Inner Noise poster">
+      <button class="poster-fullscreen-trigger" onclick="openImageModal('assets/posters/inner-noise.jpg', 'Inner Noise poster')" aria-label="Open Inner Noise poster fullscreen">
+        <img src="assets/posters/inner-noise.jpg" alt="Inner Noise poster">
+      </button>
     </div>
     <div class="poster-detail-copy">
       <p class="section-label">Psychology / Generative Poster</p>
@@ -344,6 +346,14 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="image-modal" id="imageModal" aria-hidden="true" role="dialog" aria-label="Fullscreen poster preview">
+  <button class="image-modal-close" onclick="closeImageModal()" aria-label="Close fullscreen preview">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="image-modal-backdrop" onclick="closeImageModal()" aria-label="Close fullscreen preview"></button>
+  <img id="imageModalImg" src="" alt="">
 </div>
 
 
