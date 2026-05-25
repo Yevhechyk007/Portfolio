@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -310,6 +310,34 @@
         <span class="view-behance">View case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
     </article>
+    <article class="project-card poster-project-card" role="button" tabindex="0" onclick="openPoster('city-of-tomorrow')" onkeydown="openPosterFromKeyboard(event, 'city-of-tomorrow')" aria-label="Open City of Tomorrow poster details">
+      <div class="project-cover poster-image-cover">
+        <img src="assets/posters/city-of-tomorrow.jpg" alt="City of Tomorrow poster">
+      </div>
+      <div class="project-info">
+        <h3>City of Tomorrow</h3>
+        <p class="project-type">Futurism / Generative Poster</p>
+        <p class="project-desc project-desc-clamped">An AI-assisted poster imagining a future city where technology, nature, and human harmony grow together.</p>
+        <div class="project-tools" aria-label="Tools used">
+          <span>ChatGPT</span>
+        </div>
+        <span class="view-behance">View case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </article>
+    <article class="project-card poster-project-card" role="button" tabindex="0" onclick="openPoster('rebuild-yourself')" onkeydown="openPosterFromKeyboard(event, 'rebuild-yourself')" aria-label="Open Rebuild Yourself poster details">
+      <div class="project-cover poster-image-cover">
+        <img src="assets/posters/rebuild-yourself.jpg" alt="Rebuild Yourself poster">
+      </div>
+      <div class="project-info">
+        <h3>Rebuild Yourself</h3>
+        <p class="project-type">Self-care / Generative Poster</p>
+        <p class="project-desc project-desc-clamped">An AI-assisted poster about burnout, self-acceptance, and the slow process of putting yourself back together.</p>
+        <div class="project-tools" aria-label="Tools used">
+          <span>ChatGPT</span>
+        </div>
+        <span class="view-behance">View case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </article>
   </div>
 </div>
 
@@ -341,6 +369,61 @@
   </div>
 </div>
 
+<!-- CITY OF TOMORROW POSTER -->
+<div class="poster-detail-page" id="poster-city-of-tomorrow">
+  <button class="back-btn" onclick="closePoster()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12L12 19M5 12L12 5"/></svg>
+    Back to AI Posters
+  </button>
+  <div class="poster-detail-layout">
+    <div class="poster-detail-art">
+      <button class="poster-fullscreen-trigger" onclick="openImageModal('assets/posters/city-of-tomorrow.jpg', 'City of Tomorrow poster')" aria-label="Open City of Tomorrow poster fullscreen">
+        <img src="assets/posters/city-of-tomorrow.jpg" alt="City of Tomorrow poster">
+      </button>
+    </div>
+    <div class="poster-detail-copy">
+      <p class="section-label">Futurism / Generative Poster</p>
+      <h2>City of Tomorrow</h2>
+      <p class="poster-lead">An AI-assisted poster imagining a future city where technology, nature, and human harmony grow together.</p>
+      <p>The concept is built around a hopeful version of urban futurism: architecture becomes organic, infrastructure supports life, and progress is measured by balance rather than speed.</p>
+      <p>The composition combines exhibition-poster structure with cinematic worldbuilding to frame the city as both an environment and a living system.</p>
+      <div class="poster-meta">
+        <div><span>Focus</span><strong>Nature-driven future cities</strong></div>
+        <div><span>Role</span><strong>AI art direction, visual design</strong></div>
+        <div><span>Tools</span><strong>ChatGPT</strong></div>
+        <div><span>Theme</span><strong>Technology, nature, harmony</strong></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REBUILD YOURSELF POSTER -->
+<div class="poster-detail-page" id="poster-rebuild-yourself">
+  <button class="back-btn" onclick="closePoster()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12L12 19M5 12L12 5"/></svg>
+    Back to AI Posters
+  </button>
+  <div class="poster-detail-layout">
+    <div class="poster-detail-art">
+      <button class="poster-fullscreen-trigger" onclick="openImageModal('assets/posters/rebuild-yourself.jpg', 'Rebuild Yourself poster')" aria-label="Open Rebuild Yourself poster fullscreen">
+        <img src="assets/posters/rebuild-yourself.jpg" alt="Rebuild Yourself poster">
+      </button>
+    </div>
+    <div class="poster-detail-copy">
+      <p class="section-label">Self-care / Generative Poster</p>
+      <h2>Rebuild Yourself</h2>
+      <p class="poster-lead">An AI-assisted poster about burnout, self-acceptance, and the slow process of putting yourself back together.</p>
+      <p>The poster visualizes recovery as reconstruction. The puzzle pieces represent emotional fragments, while the handwritten notes and inner critic show how healing often happens alongside doubt.</p>
+      <p>Its warmer palette and softer illustration style create a more intimate tone, turning the poster into a quiet reminder to choose yourself again.</p>
+      <div class="poster-meta">
+        <div><span>Focus</span><strong>Burnout recovery</strong></div>
+        <div><span>Role</span><strong>AI art direction, visual design</strong></div>
+        <div><span>Tools</span><strong>ChatGPT</strong></div>
+        <div><span>Theme</span><strong>Self-care, balance, reconstruction</strong></div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="image-modal" id="imageModal" aria-hidden="true" role="dialog" aria-label="Fullscreen poster preview">
   <button class="image-modal-close" onclick="closeImageModal()" aria-label="Close fullscreen preview">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -375,3 +458,5 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+

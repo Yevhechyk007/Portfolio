@@ -1,4 +1,4 @@
-// Reveal on scroll
+﻿// Reveal on scroll
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
@@ -30,7 +30,7 @@ function closeMenu() {
 
 // Category pages
 const categoryIds = ['mobile', 'landings', 'posters', 'templates'];
-const posterIds = ['inner-noise'];
+const posterIds = ['inner-noise', 'city-of-tomorrow', 'rebuild-yourself'];
 
 function showCategory(id, shouldScroll = true) {
   document.getElementById('mainContent').style.display = 'none';
@@ -165,3 +165,4 @@ window.addEventListener('keydown', (event) => {
     closeImageModal();
   }
 });
+
