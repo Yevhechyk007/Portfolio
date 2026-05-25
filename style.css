@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #FFFFFF;
   --fg: #0A0A0A;
   --fg-secondary: #555555;
@@ -364,6 +364,10 @@ section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+
+.posters-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 /* PROJECT CARDS */
@@ -886,3 +890,4 @@ footer {
   .edu-grid { grid-template-columns: 1fr; }
   .hero-scroll { display: none; }
 }
+
