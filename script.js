@@ -30,7 +30,7 @@ function closeMenu() {
 
 // Category pages
 const categoryIds = ['mobile', 'landings', 'posters', 'templates'];
-const posterIds = ['inner-noise', 'city-of-tomorrow', 'rebuild-yourself'];
+const posterIds = ['inner-noise', 'city-of-tomorrow', 'rebuild-yourself', 'matcha-focus'];
 
 function showCategory(id, shouldScroll = true) {
   document.getElementById('mainContent').style.display = 'none';
@@ -165,4 +165,5 @@ window.addEventListener('keydown', (event) => {
     closeImageModal();
   }
 });
+
 

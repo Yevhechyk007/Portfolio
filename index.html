@@ -337,6 +337,20 @@
         </div>
         <span class="view-behance">View case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
+    </article>    <article class="project-card poster-project-card" role="button" tabindex="0" onclick="openPoster('matcha-focus')" onkeydown="openPosterFromKeyboard(event, 'matcha-focus')" aria-label="Open Matcha Focus Campaign poster details">
+      <div class="project-cover poster-collage-cover">
+        <img src="assets/posters/matcha-clean-energy.jpg" alt="Matcha clean energy poster">
+        <img src="assets/posters/matcha-drink-focus.jpg" alt="Matcha drink your focus poster">
+      </div>
+      <div class="project-info">
+        <h3>Matcha Focus Campaign</h3>
+        <p class="project-type">Product Campaign / Generative Poster</p>
+        <p class="project-desc project-desc-clamped">A two-poster visual campaign built around matcha as clean fuel for focus, energy, and calm productivity.</p>
+        <div class="project-tools" aria-label="Tools used">
+          <span>ChatGPT</span>
+        </div>
+        <span class="view-behance">View case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
     </article>
   </div>
 </div>
@@ -424,6 +438,36 @@
     </div>
   </div>
 </div>
+<!-- MATCHA FOCUS CAMPAIGN -->
+<div class="poster-detail-page" id="poster-matcha-focus">
+  <button class="back-btn" onclick="closePoster()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12L12 19M5 12L12 5"/></svg>
+    Back to AI Posters
+  </button>
+  <div class="poster-detail-layout poster-series-layout">
+    <div class="poster-detail-art poster-series-art">
+      <button class="poster-fullscreen-trigger" onclick="openImageModal('assets/posters/matcha-clean-energy.jpg', 'Matcha clean energy poster')" aria-label="Open Matcha clean energy poster fullscreen">
+        <img src="assets/posters/matcha-clean-energy.jpg" alt="Matcha clean energy poster">
+      </button>
+      <button class="poster-fullscreen-trigger" onclick="openImageModal('assets/posters/matcha-drink-focus.jpg', 'Matcha drink your focus poster')" aria-label="Open Matcha drink your focus poster fullscreen">
+        <img src="assets/posters/matcha-drink-focus.jpg" alt="Matcha drink your focus poster">
+      </button>
+    </div>
+    <div class="poster-detail-copy">
+      <p class="section-label">Product Campaign / Generative Poster</p>
+      <h2>Matcha Focus Campaign</h2>
+      <p class="poster-lead">A two-poster visual campaign built around matcha as clean fuel for focus, energy, and calm productivity.</p>
+      <p>The series combines bold oversized typography, product-led composition, and a restrained black-green palette to make the drink feel sharp, modern, and performance-focused.</p>
+      <p>Both posters work as one visual system: one feels like a clean product advertisement, while the second pushes the same identity into a more graphic, close-up campaign direction.</p>
+      <div class="poster-meta">
+        <div><span>Focus</span><strong>Product-led visual campaign</strong></div>
+        <div><span>Role</span><strong>AI art direction, visual design</strong></div>
+        <div><span>Tools</span><strong>ChatGPT</strong></div>
+        <div><span>Theme</span><strong>Matcha, focus, clean energy</strong></div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="image-modal" id="imageModal" aria-hidden="true" role="dialog" aria-label="Fullscreen poster preview">
   <button class="image-modal-close" onclick="closeImageModal()" aria-label="Close fullscreen preview">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -458,6 +502,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
