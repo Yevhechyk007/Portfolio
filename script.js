@@ -31,6 +31,7 @@ function closeMenu() {
 // Category pages
 const categoryIds = ['mobile', 'landings', 'posters', 'templates'];
 const posterIds = ['inner-noise', 'city-of-tomorrow', 'rebuild-yourself', 'matcha-focus'];
+const caseIds = ['mobile-v1'];
 
 function showCategory(id, shouldScroll = true) {
   document.getElementById('mainContent').style.display = 'none';
@@ -83,6 +84,29 @@ function closePoster() {
   showCategory('posters');
 }
 
+function showCase(id, shouldScroll = true) {
+  document.getElementById('mainContent').style.display = 'none';
+  document.querySelectorAll('.category-page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.poster-detail-page').forEach(p => p.classList.remove('active'));
+  document.getElementById('case-' + id)?.classList.add('active');
+  if (shouldScroll) window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function openCase(id) {
+  showCase(id);
+  history.pushState({ case: id }, '', '#case-' + id);
+}
+
+function openCaseFromKeyboard(event, id) {
+  if (event.key !== 'Enter' && event.key !== ' ') return;
+  event.preventDefault();
+  openCase(id);
+}
+
+function closeCase() {
+  showCategory('mobile');
+}
+
 function openImageModal(src, alt) {
   const modal = document.getElementById('imageModal');
   const image = document.getElementById('imageModalImg');
@@ -125,35 +149,50 @@ function showMain(scrollToProjects = false) {
 }
 
 window.addEventListener('popstate', () => {
-  const id = window.location.hash.replace('#', '');
+  const hash = window.location.hash.replace('#', '');
 
-  if (posterIds.includes(id)) {
-    showPoster(id, false);
+  if (hash.startsWith('case-')) {
+    const id = hash.replace('case-', '');
+    if (caseIds.includes(id)) { showCase(id, false); return; }
+  }
+
+  if (posterIds.includes(hash)) {
+    showPoster(hash, false);
     return;
   }
 
-  if (categoryIds.includes(id)) {
-    showCategory(id, false);
+  if (categoryIds.includes(hash)) {
+    showCategory(hash, false);
     return;
   }
 
-  showMain(id === 'projects');
+  showMain(hash === 'projects');
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  const id = window.location.hash.replace('#', '');
+  const hash = window.location.hash.replace('#', '');
 
-  if (posterIds.includes(id)) {
+  if (hash.startsWith('case-')) {
+    const id = hash.replace('case-', '');
+    if (caseIds.includes(id)) {
+      history.replaceState({ category: 'mobile' }, '', window.location.pathname + '#mobile');
+      history.pushState({ case: id }, '', '#case-' + id);
+      showCase(id, false);
+      return;
+    }
+  }
+
+  if (posterIds.includes(hash)) {
     history.replaceState({ category: 'posters' }, '', window.location.pathname + window.location.search + '#posters');
-    history.pushState({ poster: id }, '', '#' + id);
-    showPoster(id, false);
+    history.pushState({ poster: hash }, '', '#' + hash);
+    showPoster(hash, false);
     return;
   }
 
-  if (categoryIds.includes(id)) {
+  if (categoryIds.includes(hash)) {
     history.replaceState({ main: true }, '', window.location.pathname + window.location.search + '#projects');
-    history.pushState({ category: id }, '', '#' + id);
-    showCategory(id, false);
+    history.pushState({ category: hash }, '', '#' + hash);
+    showCategory(hash, false);
     return;
   }
 

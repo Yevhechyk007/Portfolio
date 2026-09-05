@@ -17,6 +17,10 @@
     <li><a href="#projects" onclick="showMain(); closeMenu();">Projects</a></li>
     <li><a href="#contact" onclick="showMain(); closeMenu();">Contact</a></li>
   </ul>
+  <div class="nav-actions">
+    <a href="#contact" class="nav-action-link" onclick="showMain();">Get In Touch</a>
+    <a href="cv.pdf" download class="nav-action-btn">Download CV</a>
+  </div>
   <button class="nav-menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
   </button>
@@ -29,7 +33,7 @@
 <section class="hero">
   <p class="hero-name">Yevhen Ivasiuk - UI/UX Designer</p>
   <h1>Portfolio</h1>
-  <p class="hero-role">Crafting clean, usable and visually strong interfaces. Design systems, landing pages, and web applications.</p>
+  <p class="hero-role">SaaS products, mobile apps, and landing pages — designed clean and built to convert.</p>
   <div class="hero-cta">
     <a href="#projects" class="btn btn-primary">View Projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
     <a href="#contact" class="btn btn-secondary">Get in Touch</a>
@@ -37,17 +41,35 @@
   <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
 
-<div class="divider"></div>
-
+<div class="bg-dark">
 <!-- ABOUT -->
 <section id="about">
-  <p class="section-label reveal">01 - About</p>
+  <div class="about-header reveal">
+    <p class="section-label">01 - About</p>
+    <span class="availability-badge">
+      <span class="availability-dot"></span>
+      Available for freelance
+    </span>
+  </div>
   <h2 class="section-title reveal">Designing interfaces<br>that actually work</h2>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>UX/UI Designer with a strong UI sense and solid UX foundations. I focus on creating clean, usable, and visually strong interfaces for real products.</p>
-      <p>Experienced in designing landing pages and web applications, working with developers and PMs, and building scalable design systems in Figma.</p>
-      <p>Currently studying Computer Science at the University of Lodz and constantly expanding my design toolkit.</p>
+      <p>UX/UI Designer with a strong UI sense and solid UX foundations. I design SaaS products, mobile apps, and landing pages — clean, purposeful, and built around real user needs.</p>
+      <p>I work closely with developers and PMs, speak their language, and build scalable design systems in Figma. Currently studying Computer Science at the University of Lodz.</p>
+      <div class="about-stats">
+        <div class="about-stat">
+          <span class="stat-number stat-accent">10+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="about-stat">
+          <span class="stat-number">2</span>
+          <span class="stat-label">Years in design</span>
+        </div>
+        <div class="about-stat">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Tools mastered</span>
+        </div>
+      </div>
     </div>
     <div class="about-details reveal">
       <div class="detail-block">
@@ -67,21 +89,24 @@
       <div class="detail-block">
         <h4>Skills</h4>
         <div class="skills-tags">
+          <span class="skill-tag">UI Design</span>
+          <span class="skill-tag">UX Research</span>
           <span class="skill-tag">Wireframing</span>
           <span class="skill-tag">Prototyping</span>
-          <span class="skill-tag">User Research</span>
-          <span class="skill-tag">UI Design</span>
+          <span class="skill-tag">Usability Testing</span>
+          <span class="skill-tag">User Flows</span>
+          <span class="skill-tag">Information Architecture</span>
           <span class="skill-tag">Auto Layout</span>
           <span class="skill-tag">Design Systems</span>
           <span class="skill-tag">Visual Hierarchy</span>
           <span class="skill-tag">Typography</span>
+          <span class="skill-tag">Mobile-first Design</span>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<div class="divider"></div>
+</div><!-- /bg-dark -->
 
 <!-- PROJECT CATEGORIES -->
 <section id="projects">
@@ -94,7 +119,7 @@
         <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/0c8b9c242541991.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png" alt="Mobile Apps">
       </div>
       <div class="category-info">
-        <p class="category-count">1 project</p>
+        <p class="category-count">2 projects</p>
         <h3>Mobile Apps</h3>
         <span class="category-arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
@@ -111,101 +136,46 @@
       </div>
     </div>
 
-    <div class="category-card poster-category-card reveal" role="button" tabindex="0" onclick="openCategory('posters')" onkeydown="openCategoryFromKeyboard(event, 'posters')" aria-label="Open AI Posters projects">
-      <div class="category-thumb poster-thumb">
-        <img src="assets/posters/inner-noise.jpg" alt="Inner Noise poster preview">
-      </div>
-      <div class="category-info">
-        <p class="category-count">New series</p>
-        <h3>AI Posters</h3>
-        <span class="category-arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
-      </div>
-    </div>
-
-    <div class="category-card reveal" role="button" tabindex="0" onclick="openCategory('templates')" onkeydown="openCategoryFromKeyboard(event, 'templates')" aria-label="Open Templates projects">
-      <div class="category-thumb">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/404/8074f5247563351.Y3JvcCwzMzY2LDI2MzMsMjQxLDA.jpg" alt="Templates">
-      </div>
-      <div class="category-info">
-        <p class="category-count">1 project</p>
-        <h3>Templates</h3>
-        <span class="category-arrow">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
-      </div>
-    </div>
-
 
   </div>
 </section>
-
-<div class="divider"></div>
-
-<!-- CURRENTLY WORKING ON -->
-<section id="currently-working-on">
-  <p class="section-label reveal">03 - Currently Working On</p>
-  <h2 class="section-title reveal">Recent product work</h2>
-  <p class="wip-intro reveal">Recent product work currently under NDA. Case studies will be published after public release.</p>
-  <div class="wip-grid">
-    <div class="project-card nda-card reveal">
-      <div class="project-cover nda-placeholder">
-        <div class="nda-placeholder-inner">
-          <span class="nda-lock-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-              <rect x="5" y="10" width="14" height="10" rx="2"></rect>
-              <path d="M8 10V7a4 4 0 0 1 8 0v3"></path>
-            </svg>
-          </span>
-          <span class="nda-label-text">NDA</span>
-        </div>
-      </div>
-      <div class="project-info">
-        <span class="nda-tag">NDA until Q3 2026</span>
-        <h3>Lifestyle &amp; Productivity App</h3>
-        <p class="project-type">Mobile Product / Design System</p>
-        <p class="project-desc">Built a comprehensive UI Kit and design system from scratch. Implemented Figma Variables for typography, colors, and effects. Designed an interactive dashboard with complex gradient system.</p>
-        <div class="nda-meta">
-          <div class="nda-meta-row"><span class="nda-meta-label">Role</span><span>UI/UX Designer</span></div>
-          <div class="nda-meta-row"><span class="nda-meta-label">Timeline</span><span>Mar 2026 - Apr 2026</span></div>
-          <div class="nda-meta-row"><span class="nda-meta-label">Status</span><span>In final development, launch planned Q3 2026</span></div>
-        </div>
-        <p class="nda-footer-text">Reach out for more details under NDA</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
 
 <!-- EDUCATION -->
-<section>
-  <p class="section-label reveal">04 - Education</p>
+<section id="education">
+  <p class="section-label reveal">03 - Education</p>
   <h2 class="section-title reveal">Background</h2>
   <div class="edu-grid">
     <div class="edu-card reveal">
-      <h3>University of Lodz</h3>
-      <p class="edu-field">Computer Science</p>
-      <p class="edu-year">2023 - Present</p>
+      <div class="edu-emblem">UL</div>
+      <div class="edu-body">
+        <span class="edu-year">2023 – 2026</span>
+        <h3>University of Lodz</h3>
+        <p class="edu-field">Computer Science</p>
+        <p class="edu-desc">Algorithms, data structures, OOP, databases, computer networks, and software engineering. Building technical depth that directly informs better design decisions.</p>
+      </div>
     </div>
     <div class="edu-card reveal">
-      <h3>IT Step Academy</h3>
-      <p class="edu-field">UX/UI Design</p>
-      <p class="edu-year">Jun 2025 - Jan 2026</p>
+      <div class="edu-emblem edu-emblem-accent">ITS</div>
+      <div class="edu-body">
+        <span class="edu-year">Jun 2025 – Jan 2026</span>
+        <h3>IT Step Academy</h3>
+        <p class="edu-field">UX/UI Design</p>
+        <p class="edu-desc">UI design principles, UX research, Figma, wireframing, prototyping, visual hierarchy, and design systems. From first principles to production-ready design workflow.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
-
 <!-- CONTACT -->
 <section class="contact-section" id="contact">
-  <p class="section-label reveal">05 - Contact</p>
+  <p class="section-label reveal">04 - Contact</p>
   <h2 class="section-title reveal">Let's work together</h2>
   <p class="contact-desc reveal">Have a project in mind or just want to say hello? I'm always open to new opportunities and collaborations.</p>
   <div class="contact-links reveal">
     <a href="mailto:yevhen.ivasiuk1@gmail.com" class="contact-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg> Email</a>
     <a href="https://t.me/yevhenchykk" target="_blank" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.66-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.37-.49 1.02-.74 3.99-1.74 6.65-2.88 7.98-3.44 3.8-1.58 4.59-1.86 5.1-1.87.11 0 .37.03.53.17.14.12.18.28.2.45-.01.06.01.24 0 .37z"/></svg> Telegram</a>
     <a href="https://www.behance.net/yevhenivasiuk_" target="_blank" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 11c1.38 0 2.5-1.12 2.5-2.5S8.88 6 7.5 6H3v5h4.5zm0-3.5c.55 0 1 .45 1 1s-.45 1-1 1H5V7.5h2.5zM3 18h5c1.38 0 2.5-1.12 2.5-2.5 0-1.03-.63-1.92-1.52-2.3.55-.46.92-1.14.92-1.9H3v6.7zm2-4.5h3c.55 0 1 .45 1 1s-.45 1-1 1H5v-2zM15 6h6v1.5h-6zM21 16.5c0 2.49-2.01 4.5-4.5 4.5S12 18.99 12 16.5 14.01 12 16.5 12s4.5 2.01 4.5 4.5zm-2.12-.63c-.34-.77-1.1-1.31-1.98-1.31-1.2 0-2.17.97-2.17 2.17 0 .18.02.35.06.52h4.25c.02-.12.03-.25.03-.38 0-.35-.07-.7-.19-1z"/></svg> Behance</a>
-    <a href="https://www.linkedin.com/in/yevhen-ivasiuk-042383344/" target="_blank" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg> LinkedIn</a>
-    <a href="https://dribbble.com/evgen-ivasyuk" target="_blank" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.424 25.424 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.245.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"/></svg> Dribbble</a>
+    <a href="https://www.linkedin.com/in/yevhen-ivasiuk-042383344/" target="_blank" class="contact-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg> LinkedIn</a>  
   </div>
 </section>
 
@@ -224,7 +194,20 @@
     Back to Projects
   </button>
   <h2 class="category-page-title">Mobile Apps</h2>
-  <div class="category-projects-grid single">
+  <div class="category-projects-grid">
+    <article class="project-card case-card" role="button" tabindex="0" onclick="openCase('mobile-v1')" onkeydown="openCaseFromKeyboard(event, 'mobile-v1')" aria-label="Open new mobile case study">
+      <div class="project-cover case-cover-card">
+        <div class="case-cover-card-inner">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        </div>
+      </div>
+      <div class="project-info">
+        <h3>New Case Study</h3>
+        <p class="project-type">Mobile App / UX/UI Design</p>
+        <p class="project-desc">Full case study — research, wireframes, UI design, and final prototype. Coming soon.</p>
+        <span class="view-behance">View case <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
+      </div>
+    </article>
     <a href="https://www.behance.net/gallery/242541991/Frame-Personal-Finance-App" target="_blank" class="project-card">
       <div class="project-cover">
         <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/0c8b9c242541991.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png" alt="Frame">
@@ -497,6 +480,63 @@
         <span class="view-behance">View on Behance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
     </a>
+  </div>
+</div>
+
+<!-- MOBILE CASE STUDY -->
+<div class="poster-detail-page" id="case-mobile-v1">
+  <button class="back-btn" onclick="closeCase()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12L12 19M5 12L12 5"/></svg>
+    Back to Mobile Apps
+  </button>
+
+  <!-- Cover -->
+  <div class="case-cover">
+    <!-- Replace this div with <img src="..." alt="..."> when ready -->
+    <div class="case-cover-placeholder">Cover Image</div>
+  </div>
+
+  <!-- Header -->
+  <div class="case-header">
+    <div class="case-header-main">
+      <p class="section-label">Mobile App / UX/UI Design</p>
+      <h1 class="case-title">Project Name</h1>
+    </div>
+    <div class="case-meta">
+      <div><span>Role</span><strong>UI/UX Designer</strong></div>
+      <div><span>Year</span><strong>2026</strong></div>
+      <div><span>Tools</span><strong>Figma</strong></div>
+      <div><span>Platform</span><strong>iOS / Android</strong></div>
+    </div>
+  </div>
+
+  <div class="case-rule"></div>
+
+  <!-- Body -->
+  <div class="case-body">
+    <div class="case-section">
+      <h2 class="case-section-title">Overview</h2>
+      <p class="case-text">Add project overview here.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-title">Challenge</h2>
+      <p class="case-text">Describe the problem being solved.</p>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-title">Design Process</h2>
+      <p class="case-text">Describe your design decisions and process.</p>
+      <div class="case-images">
+        <div class="case-img-slot"></div>
+        <div class="case-img-slot"></div>
+      </div>
+    </div>
+
+    <div class="case-section">
+      <h2 class="case-section-title">Outcome</h2>
+      <p class="case-text">Describe the results and impact.</p>
+    </div>
   </div>
 </div>
 
