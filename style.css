@@ -354,7 +354,7 @@ section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
-  aspect-ratio: 16/6;
+  aspect-ratio: 16/9;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -444,6 +444,24 @@ section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
 .category-card:hover .category-arrow { gap: 10px; color: #fff; }
 .category-arrow svg { width: 14px; height: 14px; }
 
+/* Mobile-only elements — hidden on desktop by default */
+.category-tags { display: none; }
+.category-desc { display: none; }
+.project-tags { display: none; }
+
+.category-tag-pill {
+  padding: 4px 10px;
+  background: rgba(10,10,10,0.58);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 100px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.95);
+}
+
 /* CATEGORY PAGE */
 .category-page {
   display: none;
@@ -518,7 +536,8 @@ section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
 }
 
 .project-cover {
-  width: 100%; aspect-ratio: 16/8;
+  position: relative;
+  width: 100%; aspect-ratio: 16/10;
   overflow: hidden; background: #eee;
 }
 
@@ -849,7 +868,7 @@ section { padding: 96px 40px; max-width: var(--max-w); margin: 0 auto; }
 
 .view-behance {
   display: inline-flex; align-items: center; gap: 6px;
-  margin-top: 12px; font-size: 0.78rem; font-weight: 500;
+  margin-top: auto; padding-top: 14px; font-size: 0.78rem; font-weight: 500;
   color: var(--fg); transition: gap 0.3s;
 }
 
@@ -1061,6 +1080,150 @@ footer {
   background: var(--card-bg); border: 1px dashed var(--border); border-radius: var(--radius);
 }
 
+/* CASE STUDY FOOTER */
+.case-footer {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.case-footer-cta {
+  background: #0A0A0A;
+  border-radius: var(--radius);
+  padding: 72px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 22px;
+}
+
+.case-footer-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+.case-footer-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: #fff;
+  max-width: 440px;
+}
+
+.case-footer-next-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--fg-secondary);
+  margin-bottom: 14px;
+}
+
+.case-next-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: var(--fg);
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  transition: all 0.35s ease;
+}
+
+.case-next-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  border-color: transparent;
+}
+
+.case-next-thumb {
+  width: 110px;
+  height: 72px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #eee;
+}
+
+.case-next-thumb img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.case-next-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.case-next-info h3 {
+  font-size: 0.97rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.case-next-type {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-secondary);
+}
+
+.case-next-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--fg-secondary);
+  transition: color 0.25s, gap 0.25s;
+}
+
+.case-next-link svg { width: 12px; height: 12px; }
+
+.case-next-card:hover .case-next-link {
+  color: var(--fg);
+  gap: 8px;
+}
+
+.case-next-chevron {
+  width: 18px; height: 18px;
+  color: var(--fg-secondary);
+  flex-shrink: 0;
+  transition: transform 0.25s;
+}
+
+.case-next-card:hover .case-next-chevron {
+  transform: translateX(4px);
+  color: var(--fg);
+}
+
+/* Dripply / sequential case slides */
+.case-slides {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0;
+}
+
+.case-slides img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -1100,7 +1263,7 @@ footer {
   .about-stats { gap: 0; }
   .about-stat { padding-right: 20px; margin-right: 20px; }
   .stat-number { font-size: 1.8rem; }
-  .category-card { aspect-ratio: 16/8; padding: 24px; }
+  .category-card { aspect-ratio: 16/10; padding: 24px; }
   .category-projects-grid.single { max-width: 100%; }
   .poster-detail-page { padding-left: 20px; padding-right: 20px; }
   .poster-detail-layout { grid-template-columns: 1fr; gap: 32px; }
@@ -1112,5 +1275,151 @@ footer {
   .hero-scroll { display: none; }
 }
 
+/* ─── TOUCH / MOBILE: category cards always-visible layout ─── */
+@media (hover: none), (pointer: coarse) {
 
+  /* Remove the full-bleed image-card look */
+  .category-card {
+    aspect-ratio: unset;
+    justify-content: flex-start;
+    padding: 0;
+    color: var(--fg);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+  }
 
+  /* Hide the dark gradient overlay */
+  .category-card::before {
+    display: none;
+  }
+
+  /* Disable lift & image-zoom on tap */
+  .category-card:hover,
+  .category-card:active {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Thumb: pull it out of absolute positioning into normal flow */
+  .category-thumb {
+    position: relative;
+    inset: unset;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+  }
+
+  .category-card:hover .category-thumb img {
+    transform: none;
+  }
+
+  /* Tags: pill badges pinned to bottom-right of the image */
+  .category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+  }
+
+  /* Info block sits below the image, not overlaid */
+  .category-info {
+    padding: 16px 18px 20px;
+  }
+
+  /* Title row: name on left, arrow on right */
+  .category-info h3 {
+    font-size: 1.05rem;
+    color: var(--fg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+
+  .category-info h3::after {
+    content: '→';
+    font-size: 1rem;
+    font-weight: 400;
+    flex-shrink: 0;
+    margin-left: 8px;
+    opacity: 0.6;
+  }
+
+  /* Category type label */
+  .category-count {
+    color: var(--fg-secondary);
+    margin-bottom: 0;
+  }
+
+  /* Short description — shown only on touch */
+  .category-desc {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--fg-secondary);
+    line-height: 1.65;
+    margin-top: 8px;
+    margin-bottom: 2px;
+  }
+
+  /* "View case ↗" link */
+  .category-arrow {
+    color: var(--fg);
+    margin-top: 12px;
+  }
+
+  .category-card:hover .category-arrow {
+    gap: 6px;
+    color: var(--fg);
+  }
+
+  /* ── Project cards in subcategory pages ── */
+
+  /* Slightly taller cover images */
+  .project-cover {
+    aspect-ratio: 4/3;
+  }
+
+  /* Poster covers keep their own look but get taller too */
+  .poster-image-cover,
+  .poster-collage-cover {
+    aspect-ratio: 4/3;
+  }
+
+  /* Tags: shown over the image, bottom-right */
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+  }
+
+  /* Title row: name left, arrow right */
+  .project-info h3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .project-info h3::after {
+    content: '↗';
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.5;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* Un-clamp descriptions so full text is visible */
+  .project-desc-clamped {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+}
