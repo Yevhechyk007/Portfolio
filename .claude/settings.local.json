@@ -15,7 +15,8 @@
       "Bash(python3 -c \"from PIL import Image; print\\('pillow ok'\\)\")",
       "Bash(python -c \"from PIL import Image; print\\('pillow ok'\\)\")",
       "Bash(python3:*)",
-      "Bash(xargs du:*)"
+      "Bash(xargs du:*)",
+      "Bash(ls \"C:\\\\Users\\\\evgen\\\\Desktop\\\\Portfolio\"/*.pdf \"C:\\\\Users\\\\evgen\\\\Desktop\\\\Portfolio\"/*.PDF)"
     ]
   }
 }

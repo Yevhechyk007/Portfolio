@@ -19,7 +19,7 @@
   </ul>
   <div class="nav-actions">
     <button class="nav-action-link" onclick="openContactModal(this)">Get In Touch</button>
-    <a href="cv.pdf" download class="nav-action-btn">Download CV</a>
+    <a href="CV_Yevhen_Ivasiuk.pdf" target="_blank" rel="noopener" class="nav-action-btn">View CV</a>
   </div>
   <button class="nav-menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
@@ -443,14 +443,8 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
 
-    <!-- Tab switcher -->
-    <div class="modal-tabs" role="tablist">
-      <button class="modal-tab active" role="tab" aria-selected="true"  data-tab="connect" aria-controls="tab-connect">Get in touch</button>
-      <button class="modal-tab"        role="tab" aria-selected="false" data-tab="message" aria-controls="tab-message">Send a message</button>
-    </div>
-
-    <!-- Panel A: messenger links -->
-    <div class="modal-panel" id="tab-connect" role="tabpanel">
+    <!-- Messenger links -->
+    <div id="tab-connect">
       <h2 id="modalHeading" class="modal-heading">Let's connect</h2>
       <p class="modal-subtitle">Choose the way you prefer to reach out.</p>
       <div class="modal-links">
@@ -466,45 +460,6 @@
         <a href="https://www.behance.net/yevhenivasiuk_" target="_blank" rel="noopener" class="contact-link modal-contact-link">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.5 11c1.38 0 2.5-1.12 2.5-2.5S8.88 6 7.5 6H3v5h4.5zm0-3.5c.55 0 1 .45 1 1s-.45 1-1 1H5V7.5h2.5zM3 18h5c1.38 0 2.5-1.12 2.5-2.5 0-1.03-.63-1.92-1.52-2.3.55-.46.92-1.14.92-1.9H3v6.7zm2-4.5h3c.55 0 1 .45 1 1s-.45 1-1 1H5v-2zM15 6h6v1.5h-6zM21 16.5c0 2.49-2.01 4.5-4.5 4.5S12 18.99 12 16.5 14.01 12 16.5 12s4.5 2.01 4.5 4.5zm-2.12-.63c-.34-.77-1.1-1.31-1.98-1.31-1.2 0-2.17.97-2.17 2.17 0 .18.02.35.06.52h4.25c.02-.12.03-.25.03-.38 0-.35-.07-.7-.19-1z"/></svg> Behance
         </a>
-      </div>
-    </div>
-
-    <!-- Panel B: quick message form -->
-    <div class="modal-panel modal-panel--hidden" id="tab-message" role="tabpanel">
-      <h2 class="modal-heading">Send a quick message</h2>
-      <p class="modal-subtitle">I'll get back to you within a day or two.</p>
-
-      <form name="contact" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" class="modal-form" novalidate>
-        <input type="hidden" name="form-name" value="contact">
-        <div class="modal-honeypot" aria-hidden="true">
-          <label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
-        </div>
-
-        <div class="form-field">
-          <label for="cfName">Name</label>
-          <input type="text" id="cfName" name="name" required placeholder="Your name" autocomplete="given-name">
-        </div>
-        <div class="form-field">
-          <label for="cfEmail">Email</label>
-          <input type="email" id="cfEmail" name="email" required placeholder="your@email.com" autocomplete="email">
-        </div>
-        <div class="form-field">
-          <label for="cfMessage">Message</label>
-          <textarea id="cfMessage" name="message" required placeholder="Tell me about your project…" rows="4"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary modal-submit">
-          Send message
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-        </button>
-      </form>
-
-      <div class="modal-success modal-panel--hidden" id="contactSuccess">
-        <div class="modal-success-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="26" height="26"><path d="M20 6L9 17l-5-5"/></svg>
-        </div>
-        <h3>Thanks — I'll get back to you soon.</h3>
-        <p>Message received. I usually respond within a day or two.</p>
       </div>
     </div>
 
