@@ -26,6 +26,14 @@
   </button>
 </nav>
 
+<!-- Netlify build-bot form detection — hidden static replica -->
+<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text"  name="name">
+  <input type="email" name="email">
+  <textarea name="message"></textarea>
+  <input type="text"  name="bot-field">
+</form>
+
 <!-- MAIN CONTENT -->
 <div id="mainContent">
 
@@ -116,7 +124,7 @@
 
     <div class="category-card reveal" role="button" tabindex="0" onclick="openCategory('mobile')" onkeydown="openCategoryFromKeyboard(event, 'mobile')" aria-label="Open Mobile Apps projects">
       <div class="category-thumb">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/0c8b9c242541991.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png" alt="Mobile Apps">
+        <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/max_808/0c8b9c242541991.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png" alt="Mobile Apps">
         <div class="category-tags" aria-hidden="true">
           <span class="category-tag-pill">Mobile</span>
           <span class="category-tag-pill">UI/UX Design</span>
@@ -132,7 +140,7 @@
 
     <div class="category-card reveal" role="button" tabindex="0" onclick="openCategory('landings')" onkeydown="openCategoryFromKeyboard(event, 'landings')" aria-label="Open Landing Pages projects">
       <div class="category-thumb">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/49e3e6240427803.Y3JvcCwxMjU1LDk4MiwxMzksMjE.jpg" alt="Landing Pages">
+        <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/max_808/49e3e6240427803.Y3JvcCwxMjU1LDk4MiwxMzksMjE.jpg" alt="Landing Pages">
         <div class="category-tags" aria-hidden="true">
           <span class="category-tag-pill">Web</span>
           <span class="category-tag-pill">UI Design</span>
@@ -207,7 +215,10 @@
   <div class="category-projects-grid">
     <article class="project-card case-card" role="button" tabindex="0" onclick="openCase('mobile-v1')" onkeydown="openCaseFromKeyboard(event, 'mobile-v1')" aria-label="Open Dripply case study">
       <div class="project-cover">
-        <img src="Dripply/01Hero.jpg" alt="Dripply">
+        <picture>
+          <source srcset="Dripply/01Hero.webp" type="image/webp">
+          <img src="Dripply/01Hero.jpg" alt="Dripply" width="1440" height="1024" loading="lazy">
+        </picture>
         <div class="project-tags" aria-hidden="true">
           <span class="project-tag-pill">Mobile</span>
           <span class="project-tag-pill">UX/UI</span>
@@ -225,7 +236,7 @@
     </article>
     <a href="https://www.behance.net/gallery/242541991/Frame-Personal-Finance-App" target="_blank" class="project-card">
       <div class="project-cover">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/0c8b9c242541991.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png" alt="Frame">
+        <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/max_808/0c8b9c242541991.Y3JvcCwxMzgwLDEwODAsMjcwLDA.png" alt="Frame">
         <div class="project-tags" aria-hidden="true">
           <span class="project-tag-pill">Mobile</span>
           <span class="project-tag-pill">Fintech</span>
@@ -254,7 +265,7 @@
   <div class="category-projects-grid">
     <a href="https://www.behance.net/gallery/241408847/ZEUS-iGaming-Landing" target="_blank" class="project-card">
       <div class="project-cover">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/e8a112241408847.Y3JvcCwxMTkzLDkzMyw1Niww.jpg" alt="ZEUS">
+        <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/max_808/e8a112241408847.Y3JvcCwxMTkzLDkzMyw1Niww.jpg" alt="ZEUS">
         <div class="project-tags" aria-hidden="true">
           <span class="project-tag-pill">Landing</span>
           <span class="project-tag-pill">iGaming</span>
@@ -272,7 +283,7 @@
     </a>
     <a href="https://www.behance.net/gallery/240427803/Aivora-Landing-Page-(Web-Mobile)" target="_blank" class="project-card">
       <div class="project-cover">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/49e3e6240427803.Y3JvcCwxMjU1LDk4MiwxMzksMjE.jpg" alt="Aivora">
+        <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/max_808/49e3e6240427803.Y3JvcCwxMjU1LDk4MiwxMzksMjE.jpg" alt="Aivora">
         <div class="project-tags" aria-hidden="true">
           <span class="project-tag-pill">SaaS</span>
           <span class="project-tag-pill">Web & Mobile</span>
@@ -290,7 +301,7 @@
     </a>
     <a href="https://www.behance.net/gallery/238305659/MOMU-Landing-Museum-of-Modern-Visions" target="_blank" class="project-card">
       <div class="project-cover">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/ab4569238305659.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="MOMU">
+        <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/max_808/ab4569238305659.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="MOMU">
         <div class="project-tags" aria-hidden="true">
           <span class="project-tag-pill">Landing</span>
           <span class="project-tag-pill">Cultural</span>
@@ -308,7 +319,7 @@
     </a>
     <a href="https://www.behance.net/gallery/234177133/Teethly-Modern-Dental-Clinic-LangingPage" target="_blank" class="project-card">
       <div class="project-cover">
-        <img src="https://mir-s3-cdn-cf.behance.net/projects/max_808/b3541b234177133.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Teethly">
+        <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/max_808/b3541b234177133.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Teethly">
         <div class="project-tags" aria-hidden="true">
           <span class="project-tag-pill">Landing</span>
           <span class="project-tag-pill">Medical</span>
@@ -339,18 +350,54 @@
 
   <!-- Case slides — sequential like a Behance presentation -->
   <div class="case-slides">
-    <img src="Dripply/Pre About.jpg"                    alt="About Dripply"               loading="lazy">
-    <img src="Dripply/Solution - Goal - Challenge.jpg"  alt="Solution, Goal & Challenge"  loading="lazy">
-    <img src="Dripply/Design Process.jpg"               alt="Design Process"              loading="lazy">
-    <img src="Dripply/Tasks & goals.jpg"                alt="Tasks & Goals"               loading="lazy">
-    <img src="Dripply/Mockups.jpg"                      alt="Device Mockups"              loading="lazy">
-    <img src="Dripply/Wireframe - 11.jpg"               alt="Wireframes"                  loading="lazy">
-    <img src="Dripply/Icons.jpg"                        alt="Icon System"                 loading="lazy">
-    <img src="Dripply/Home Page.jpg"                    alt="Home Page Design"            loading="lazy">
-    <img src="Dripply/Capturing a moment.jpg"           alt="Usage in Context"            loading="lazy">
-    <img src="Dripply/Timeline.jpg"                     alt="Project Timeline"            loading="lazy">
-    <img src="Dripply/Personal Story.jpg"               alt="Personal Story"              loading="lazy">
-    <img src="Dripply/Thank You for Watching.jpg"       alt="Thank You"                   loading="lazy">
+    <picture>
+      <source srcset="Dripply/Pre About.webp" type="image/webp">
+      <img src="Dripply/Pre About.jpg" alt="About Dripply" width="1440" height="1024">
+    </picture>
+    <picture>
+      <source srcset="Dripply/Solution - Goal - Challenge.webp" type="image/webp">
+      <img src="Dripply/Solution - Goal - Challenge.jpg" alt="Solution, Goal & Challenge" width="1440" height="1024" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="Dripply/Design Process.webp" type="image/webp">
+      <img src="Dripply/Design Process.jpg" alt="Design Process" width="1440" height="788" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="Dripply/Tasks & goals.webp" type="image/webp">
+      <img src="Dripply/Tasks & goals.jpg" alt="Tasks & Goals" width="1440" height="707" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="Dripply/Mockups.webp" type="image/webp">
+      <img src="Dripply/Mockups.jpg" alt="Device Mockups" width="1440" height="1024" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="Dripply/Wireframe - 11.webp" type="image/webp">
+      <img src="Dripply/Wireframe - 11.jpg" alt="Wireframes" width="1440" height="1027" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="Dripply/Icons.webp" type="image/webp">
+      <img src="Dripply/Icons.jpg" alt="Icon System" width="1440" height="1024" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="Dripply/Home Page.webp" type="image/webp">
+      <img src="Dripply/Home Page.jpg" alt="Home Page Design" width="1440" height="1027" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="Dripply/Capturing a moment.webp" type="image/webp">
+      <img src="Dripply/Capturing a moment.jpg" alt="Usage in Context" width="1440" height="1027" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="Dripply/Timeline.webp" type="image/webp">
+      <img src="Dripply/Timeline.jpg" alt="Project Timeline" width="1440" height="1027" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="Dripply/Personal Story.webp" type="image/webp">
+      <img src="Dripply/Personal Story.jpg" alt="Personal Story" width="1440" height="1027" loading="lazy">
+    </picture>
+    <picture>
+      <source srcset="Dripply/Thank You for Watching.webp" type="image/webp">
+      <img src="Dripply/Thank You for Watching.jpg" alt="Thank You" width="1440" height="409" loading="lazy">
+    </picture>
   </div>
 
   <!-- Case footer -->

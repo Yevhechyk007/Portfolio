@@ -6,7 +6,16 @@
       "Skill(claude-in-chrome)",
       "mcp__claude-in-chrome__navigate",
       "Bash(cp /tmp/old_index.html index.html)",
-      "Bash(cp /tmp/old_style.css style.css)"
+      "Bash(cp /tmp/old_style.css style.css)",
+      "Bash(node -e \"try{require\\('sharp'\\);console.log\\('sharp ok'\\)}catch\\(e\\){console.log\\('no sharp'\\)}\")",
+      "Bash(magick --version)",
+      "Bash(convert --version)",
+      "Bash(cwebp --version)",
+      "Bash(ffmpeg -version)",
+      "Bash(python3 -c \"from PIL import Image; print\\('pillow ok'\\)\")",
+      "Bash(python -c \"from PIL import Image; print\\('pillow ok'\\)\")",
+      "Bash(python3:*)",
+      "Bash(xargs du:*)"
     ]
   }
 }

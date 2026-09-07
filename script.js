@@ -360,25 +360,28 @@ if (contactForm) {
 
     try {
       const body = new URLSearchParams(new FormData(contactForm)).toString();
+      console.log('[contact form] submitting:', body);
       const res  = await fetch('/', {
         method:  'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body,
       });
-      if (!res.ok) throw new Error('Network error');
+      console.log('[contact form] response status:', res.status);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
       contactForm.classList.add('modal-panel--hidden');
       contactSuccess.classList.remove('modal-panel--hidden');
-    } catch {
+    } catch (err) {
+      console.error('[contact form] submission failed:', err);
       submitBtn.disabled = false;
       submitBtn.textContent = '';
       submitBtn.appendChild(document.createTextNode('Send message'));
       submitBtn.appendChild(createArrowSvg());
-      const err = document.createElement('p');
-      err.className = 'field-error-msg';
-      err.style.marginTop = '10px';
-      err.textContent = 'Something went wrong — try emailing me directly.';
-      submitBtn.after(err);
+      const errEl = document.createElement('p');
+      errEl.className = 'field-error-msg';
+      errEl.style.marginTop = '10px';
+      errEl.textContent = 'Something went wrong — try emailing me directly.';
+      submitBtn.after(errEl);
     }
   });
 }
