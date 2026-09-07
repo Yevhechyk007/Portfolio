@@ -201,8 +201,186 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    closeImageModal();
+    if (contactModal.classList.contains('open')) {
+      closeContactModal();
+    } else {
+      closeImageModal();
+    }
   }
 });
+
+// ── Contact Modal ─────────────────────────────────────────────────────────────
+
+const contactModal   = document.getElementById('contactModal');
+const contactCard    = contactModal.querySelector('.modal-card');
+const contactForm    = document.getElementById('contactForm');
+const contactSuccess = document.getElementById('contactSuccess');
+
+const FOCUSABLE_SEL = [
+  'a[href]', 'button:not([disabled])', 'input:not([disabled])',
+  'textarea:not([disabled])', 'select:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])'
+].join(', ');
+
+let modalTrigger = null;
+
+function openContactModal(triggerEl) {
+  modalTrigger = triggerEl || null;
+  resetModal();
+  contactModal.setAttribute('aria-hidden', 'false');
+  contactModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  requestAnimationFrame(() => {
+    const first = contactCard.querySelector(FOCUSABLE_SEL);
+    if (first) first.focus();
+  });
+}
+
+function closeContactModal() {
+  contactModal.classList.remove('open');
+  contactModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  if (modalTrigger) {
+    modalTrigger.focus();
+    modalTrigger = null;
+  }
+}
+
+function resetModal() {
+  // Go back to first tab
+  switchTab('connect');
+  // Clear form
+  if (contactForm) {
+    contactForm.reset();
+    contactForm.classList.remove('modal-panel--hidden');
+    contactForm.querySelectorAll('.field-invalid').forEach(el => el.classList.remove('field-invalid'));
+    contactForm.querySelectorAll('.field-error-msg').forEach(el => el.remove());
+    const btn = contactForm.querySelector('.modal-submit');
+    if (btn) { btn.disabled = false; btn.textContent = 'Send message'; btn.appendChild(createArrowSvg()); }
+  }
+  // Hide success
+  if (contactSuccess) contactSuccess.classList.add('modal-panel--hidden');
+}
+
+function createArrowSvg() {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('fill', 'none');
+  svg.setAttribute('stroke', 'currentColor');
+  svg.setAttribute('stroke-width', '2');
+  svg.setAttribute('width', '14');
+  svg.setAttribute('height', '14');
+  const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttribute('d', 'M7 17L17 7M17 7H7M17 7V17');
+  svg.appendChild(path);
+  return svg;
+}
+
+function switchTab(tabId) {
+  contactModal.querySelectorAll('.modal-tab').forEach(t => {
+    const active = t.dataset.tab === tabId;
+    t.classList.toggle('active', active);
+    t.setAttribute('aria-selected', String(active));
+  });
+  contactModal.querySelectorAll('.modal-panel').forEach(p => {
+    p.classList.toggle('modal-panel--hidden', p.id !== 'tab-' + tabId);
+  });
+}
+
+// Backdrop click → close
+contactModal.addEventListener('click', (e) => {
+  if (e.target === contactModal) closeContactModal();
+});
+
+// Close button
+contactModal.querySelector('.modal-close').addEventListener('click', closeContactModal);
+
+// Tab switching
+contactModal.querySelectorAll('.modal-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    switchTab(tab.dataset.tab);
+    const panel = document.getElementById('tab-' + tab.dataset.tab);
+    const first = panel?.querySelector(FOCUSABLE_SEL);
+    if (first) first.focus();
+  });
+});
+
+// Messenger links — close modal when clicked
+contactModal.querySelectorAll('.modal-contact-link').forEach(link => {
+  link.addEventListener('click', () => closeContactModal());
+});
+
+// Focus trap
+contactModal.addEventListener('keydown', (e) => {
+  if (e.key !== 'Tab') return;
+  const focusable = [...contactCard.querySelectorAll(FOCUSABLE_SEL)];
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last  = focusable[focusable.length - 1];
+  if (e.shiftKey) {
+    if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+  } else {
+    if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+  }
+});
+
+// Form submission — Netlify Forms
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Clear previous errors
+    contactForm.querySelectorAll('.field-invalid').forEach(el => el.classList.remove('field-invalid'));
+    contactForm.querySelectorAll('.field-error-msg').forEach(el => el.remove());
+
+    // Validate
+    let valid = true;
+    contactForm.querySelectorAll('[required]').forEach(field => {
+      let msg = '';
+      if (!field.value.trim()) {
+        msg = 'This field is required.';
+      } else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim())) {
+        msg = 'Please enter a valid email address.';
+      }
+      if (msg) {
+        valid = false;
+        field.classList.add('field-invalid');
+        const err = document.createElement('span');
+        err.className = 'field-error-msg';
+        err.textContent = msg;
+        field.after(err);
+      }
+    });
+    if (!valid) return;
+
+    // Submit
+    const submitBtn = contactForm.querySelector('.modal-submit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+      const body = new URLSearchParams(new FormData(contactForm)).toString();
+      const res  = await fetch('/', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      });
+      if (!res.ok) throw new Error('Network error');
+
+      contactForm.classList.add('modal-panel--hidden');
+      contactSuccess.classList.remove('modal-panel--hidden');
+    } catch {
+      submitBtn.disabled = false;
+      submitBtn.textContent = '';
+      submitBtn.appendChild(document.createTextNode('Send message'));
+      submitBtn.appendChild(createArrowSvg());
+      const err = document.createElement('p');
+      err.className = 'field-error-msg';
+      err.style.marginTop = '10px';
+      err.textContent = 'Something went wrong — try emailing me directly.';
+      submitBtn.after(err);
+    }
+  });
+}
 
 
