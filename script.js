@@ -35,6 +35,7 @@ const caseIds = ['mobile-v1'];
 
 function showCategory(id, shouldScroll = true) {
   document.getElementById('mainContent').style.display = 'none';
+  document.querySelector('nav').classList.add('nav-hidden');
   document.querySelectorAll('.category-page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.poster-detail-page').forEach(p => p.classList.remove('active'));
   document.getElementById('cat-' + id)?.classList.add('active');
@@ -46,6 +47,7 @@ function showCategory(id, shouldScroll = true) {
 
 function showPoster(id, shouldScroll = true) {
   document.getElementById('mainContent').style.display = 'none';
+  document.querySelector('nav').classList.add('nav-hidden');
   document.querySelectorAll('.category-page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.poster-detail-page').forEach(p => p.classList.remove('active'));
   document.getElementById('poster-' + id)?.classList.add('active');
@@ -86,6 +88,7 @@ function closePoster() {
 
 function showCase(id, shouldScroll = true) {
   document.getElementById('mainContent').style.display = 'none';
+  document.querySelector('nav').classList.add('nav-hidden');
   document.querySelectorAll('.category-page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.poster-detail-page').forEach(p => p.classList.remove('active'));
   document.getElementById('case-' + id)?.classList.add('active');
@@ -140,6 +143,7 @@ function showMain(scrollToProjects = false) {
   document.querySelectorAll('.category-page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.poster-detail-page').forEach(p => p.classList.remove('active'));
   document.getElementById('mainContent').style.display = 'block';
+  document.querySelector('nav').classList.remove('nav-hidden');
 
   if (scrollToProjects) {
     setTimeout(() => {
