@@ -29,8 +29,7 @@ function closeMenu() {
 }
 
 // Category pages
-const categoryIds = ['mobile', 'landings', 'posters', 'templates'];
-const posterIds = ['inner-noise', 'city-of-tomorrow', 'rebuild-yourself', 'matcha-focus'];
+const categoryIds = ['mobile', 'landings'];
 const caseIds = ['mobile-v1'];
 
 function showCategory(id, shouldScroll = true) {
@@ -39,18 +38,6 @@ function showCategory(id, shouldScroll = true) {
   document.querySelectorAll('.category-page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.poster-detail-page').forEach(p => p.classList.remove('active'));
   document.getElementById('cat-' + id)?.classList.add('active');
-
-  if (shouldScroll) {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-}
-
-function showPoster(id, shouldScroll = true) {
-  document.getElementById('mainContent').style.display = 'none';
-  document.querySelector('nav').classList.add('nav-hidden');
-  document.querySelectorAll('.category-page').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.poster-detail-page').forEach(p => p.classList.remove('active'));
-  document.getElementById('poster-' + id)?.classList.add('active');
 
   if (shouldScroll) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -66,24 +53,6 @@ function openCategoryFromKeyboard(event, id) {
   if (event.key !== 'Enter' && event.key !== ' ') return;
   event.preventDefault();
   openCategory(id);
-}
-
-function openPoster(id) {
-  showPoster(id);
-  history.pushState({ poster: id }, '', '#' + id);
-}
-
-function openPosterFromKeyboard(event, id) {
-  if (event.key !== 'Enter' && event.key !== ' ') return;
-  event.preventDefault();
-  openPoster(id);
-}
-
-function closePoster() {
-  if (history.state?.poster) {
-    history.replaceState({ category: 'posters' }, '', window.location.pathname + window.location.search + '#posters');
-  }
-  showCategory('posters');
 }
 
 function showCase(id, shouldScroll = true) {
@@ -108,28 +77,6 @@ function openCaseFromKeyboard(event, id) {
 
 function closeCase() {
   showCategory('mobile');
-}
-
-function openImageModal(src, alt) {
-  const modal = document.getElementById('imageModal');
-  const image = document.getElementById('imageModalImg');
-
-  image.src = src;
-  image.alt = alt;
-  modal.classList.add('active');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeImageModal() {
-  const modal = document.getElementById('imageModal');
-  const image = document.getElementById('imageModalImg');
-
-  modal.classList.remove('active');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-  image.src = '';
-  image.alt = '';
 }
 
 function closeCategory() {
@@ -160,11 +107,6 @@ window.addEventListener('popstate', () => {
     if (caseIds.includes(id)) { showCase(id, false); return; }
   }
 
-  if (posterIds.includes(hash)) {
-    showPoster(hash, false);
-    return;
-  }
-
   if (categoryIds.includes(hash)) {
     showCategory(hash, false);
     return;
@@ -186,13 +128,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (posterIds.includes(hash)) {
-    history.replaceState({ category: 'posters' }, '', window.location.pathname + window.location.search + '#posters');
-    history.pushState({ poster: hash }, '', '#' + hash);
-    showPoster(hash, false);
-    return;
-  }
-
   if (categoryIds.includes(hash)) {
     history.replaceState({ main: true }, '', window.location.pathname + window.location.search + '#projects');
     history.pushState({ category: hash }, '', '#' + hash);
@@ -204,12 +139,8 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    if (contactModal.classList.contains('open')) {
-      closeContactModal();
-    } else {
-      closeImageModal();
-    }
+  if (event.key === 'Escape' && contactModal.classList.contains('open')) {
+    closeContactModal();
   }
 });
 
