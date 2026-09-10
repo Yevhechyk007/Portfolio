@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+
+  <!-- Top border accent line -->
+  <rect x="60" y="60" width="80" height="4" rx="2" fill="#F97316"/>
+
+  <!-- Name / role label -->
+  <text x="60" y="130" font-family="Sora, sans-serif" font-size="18" font-weight="400" fill="#555555" letter-spacing="0.5">Yevhen Ivasiuk — UI/UX Designer</text>
+
+  <!-- Main heading -->
+  <text x="60" y="240" font-family="Sora, sans-serif" font-size="100" font-weight="700" fill="#0A0A0A" letter-spacing="-3">Portfolio</text>
+
+  <!-- Subtitle -->
+  <text x="60" y="320" font-family="Sora, sans-serif" font-size="22" font-weight="300" fill="#555555">SaaS products, mobile apps, and landing pages —</text>
+  <text x="60" y="354" font-family="Sora, sans-serif" font-size="22" font-weight="300" fill="#555555">designed clean and built to convert.</text>
+
+  <!-- CTA pill -->
+  <rect x="60" y="410" width="180" height="52" rx="26" fill="#F97316"/>
+  <text x="150" y="442" font-family="Sora, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF" text-anchor="middle">View Projects →</text>
+
+  <!-- Decorative right side dots grid -->
+  <g fill="#D4D4D4">
+    <circle cx="820" cy="180" r="4"/>
+    <circle cx="860" cy="180" r="4"/>
+    <circle cx="900" cy="180" r="4"/>
+    <circle cx="940" cy="180" r="4"/>
+    <circle cx="980" cy="180" r="4"/>
+    <circle cx="1020" cy="180" r="4"/>
+    <circle cx="1060" cy="180" r="4"/>
+    <circle cx="1100" cy="180" r="4"/>
+    <circle cx="1140" cy="180" r="4"/>
+
+    <circle cx="820" cy="220" r="4"/>
+    <circle cx="860" cy="220" r="4"/>
+    <circle cx="900" cy="220" r="4"/>
+    <circle cx="940" cy="220" r="4"/>
+    <circle cx="980" cy="220" r="4"/>
+    <circle cx="1020" cy="220" r="4"/>
+    <circle cx="1060" cy="220" r="4"/>
+    <circle cx="1100" cy="220" r="4"/>
+    <circle cx="1140" cy="220" r="4"/>
+
+    <circle cx="820" cy="260" r="4"/>
+    <circle cx="860" cy="260" r="4"/>
+    <circle cx="900" cy="260" r="4"/>
+    <circle cx="940" cy="260" r="4"/>
+    <circle cx="980" cy="260" r="4"/>
+    <circle cx="1020" cy="260" r="4"/>
+    <circle cx="1060" cy="260" r="4"/>
+    <circle cx="1100" cy="260" r="4"/>
+    <circle cx="1140" cy="260" r="4"/>
+
+    <circle cx="820" cy="300" r="4"/>
+    <circle cx="860" cy="300" r="4"/>
+    <circle cx="900" cy="300" r="4"/>
+    <circle cx="940" cy="300" r="4"/>
+    <circle cx="980" cy="300" r="4"/>
+    <circle cx="1020" cy="300" r="4"/>
+    <circle cx="1060" cy="300" r="4"/>
+    <circle cx="1100" cy="300" r="4"/>
+    <circle cx="1140" cy="300" r="4"/>
+
+    <circle cx="820" cy="340" r="4"/>
+    <circle cx="860" cy="340" r="4"/>
+    <circle cx="900" cy="340" r="4"/>
+    <circle cx="940" cy="340" r="4"/>
+    <circle cx="980" cy="340" r="4"/>
+    <circle cx="1020" cy="340" r="4"/>
+    <circle cx="1060" cy="340" r="4"/>
+    <circle cx="1100" cy="340" r="4"/>
+    <circle cx="1140" cy="340" r="4"/>
+
+    <circle cx="820" cy="380" r="4"/>
+    <circle cx="860" cy="380" r="4"/>
+    <circle cx="900" cy="380" r="4"/>
+    <circle cx="940" cy="380" r="4"/>
+    <circle cx="980" cy="380" r="4"/>
+    <circle cx="1020" cy="380" r="4"/>
+    <circle cx="1060" cy="380" r="4"/>
+    <circle cx="1100" cy="380" r="4"/>
+    <circle cx="1140" cy="380" r="4"/>
+
+    <circle cx="820" cy="420" r="4"/>
+    <circle cx="860" cy="420" r="4"/>
+    <circle cx="900" cy="420" r="4"/>
+    <circle cx="940" cy="420" r="4"/>
+    <circle cx="980" cy="420" r="4"/>
+    <circle cx="1020" cy="420" r="4"/>
+    <circle cx="1060" cy="420" r="4"/>
+    <circle cx="1100" cy="420" r="4"/>
+    <circle cx="1140" cy="420" r="4"/>
+  </g>
+
+  <!-- Large decorative "Y" initial -->
+  <text x="820" y="460" font-family="Sora, sans-serif" font-size="260" font-weight="700" fill="#F5F5F5" letter-spacing="-8">YI</text>
+
+  <!-- Bottom domain -->
+  <text x="60" y="570" font-family="Sora, sans-serif" font-size="15" font-weight="400" fill="#D4D4D4" letter-spacing="1">yiv.netlify.app</text>
+</svg>
