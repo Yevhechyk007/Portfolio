@@ -23,7 +23,8 @@
       "Bash(choco --version)",
       "Bash(scoop --version)",
       "Bash(winget install:*)",
-      "Bash(winget search:*)"
+      "Bash(winget search:*)",
+      "Bash(gh api:*)"
     ]
   }
 }

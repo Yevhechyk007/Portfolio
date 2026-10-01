@@ -29,8 +29,9 @@ function closeMenu() {
 }
 
 // Category pages
-const categoryIds = ['mobile', 'landings'];
-const caseIds = ['mobile-v1'];
+const categoryIds = ['mobile', 'landings', 'web-apps'];
+const caseCategories = { 'mobile-v1': 'mobile', 'government-appointment': 'web-apps' };
+const caseIds = Object.keys(caseCategories);
 
 function showCategory(id, shouldScroll = true) {
   document.getElementById('mainContent').style.display = 'none';
@@ -66,7 +67,7 @@ function showCase(id, shouldScroll = true) {
 
 function openCase(id) {
   showCase(id);
-  history.pushState({ case: id }, '', '#case-' + id);
+  history.pushState({ case: id, parentCategory: caseCategories[id] }, '', '#case-' + id);
 }
 
 function openCaseFromKeyboard(event, id) {
@@ -76,7 +77,14 @@ function openCaseFromKeyboard(event, id) {
 }
 
 function closeCase() {
-  showCategory('mobile');
+  const id = window.location.hash.slice(6);
+  const category = caseCategories[id] || 'mobile';
+  if (history.state?.parentCategory === category) {
+    history.back();
+  } else {
+    history.replaceState({ category }, '', '#' + category);
+    showCategory(category);
+  }
 }
 
 function closeCategory() {
@@ -121,8 +129,9 @@ window.addEventListener('DOMContentLoaded', () => {
   if (hash.startsWith('case-')) {
     const id = hash.replace('case-', '');
     if (caseIds.includes(id)) {
-      history.replaceState({ category: 'mobile' }, '', window.location.pathname + '#mobile');
-      history.pushState({ case: id }, '', '#case-' + id);
+      const category = caseCategories[id];
+      history.replaceState({ category }, '', window.location.pathname + window.location.search + '#' + category);
+      history.pushState({ case: id, parentCategory: category }, '', '#case-' + id);
       showCase(id, false);
       return;
     }
@@ -200,5 +209,4 @@ contactModal.addEventListener('keydown', (e) => {
     if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
   }
 });
-
 
