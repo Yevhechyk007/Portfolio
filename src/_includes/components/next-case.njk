@@ -1,4 +1,4 @@
-<a href="{{ nextProject.href }}" target="_blank" rel="noopener" class="case-footer-next">
+<a href="{{ nextProject.href }}" {% if nextProject.external %}target="_blank" rel="noopener"{% endif %} class="case-footer-next">
       <p class="case-footer-next-label">Next case</p>
       <div class="case-next-row">
         <div class="case-next-thumb">
@@ -8,7 +8,7 @@
           <h3>{{ nextProject.title }}</h3>
           <p class="case-next-type">{{ nextProject.badges | join(" / ") }}</p>
           <span class="case-next-link">
-            View on Behance
+            {% if nextProject.external %}View on Behance{% else %}View case{% endif %}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
           </span>
         </div>
