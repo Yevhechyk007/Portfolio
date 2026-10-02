@@ -1,0 +1,160 @@
+{
+  "layout": "layouts/case.njk",
+  "pageType": "case",
+  "tags": [
+    "project"
+  ],
+  "title": "Government Appointment System — UX Redesign — Yevhen Ivasiuk",
+  "description": "A research-led redesign of the City of Lodz appointment system, completed as a bachelor’s thesis — from UX audit and usability testing to desktop and mobile design and validation.",
+  "permalink": "/cases/government-appointment/",
+  "order": 7,
+  "project": {
+    "title": "Government Appointment System — UX Redesign",
+    "category": "web-apps",
+    "href": "/cases/government-appointment/",
+    "cover": "/assets/projects/government-appointment/hero.jpg",
+    "summary": "A research-led redesign of the City of Lodz appointment system, completed as a bachelor’s thesis — from UX audit and usability testing to desktop and mobile design and validation.",
+    "badges": [
+      "Desktop &amp; Mobile",
+      "Bachelor’s Thesis"
+    ],
+    "pills": [
+      "Web App",
+      "UX Redesign"
+    ],
+    "external": false,
+    "order": 7,
+    "cardClass": "booking-project-card"
+  },
+  "slides": [
+    {
+      "src": "/assets/projects/government-appointment/hero.jpg",
+      "alt": "Government Appointment System desktop and mobile redesign",
+      "width": 1440,
+      "height": 825
+    },
+    {
+      "src": "/assets/projects/government-appointment/about.jpg",
+      "alt": "Project overview and bachelor’s thesis",
+      "width": 1440,
+      "height": 756
+    },
+    {
+      "src": "/assets/projects/government-appointment/design-proces.jpg",
+      "alt": "Design process: research, discovery and solution",
+      "width": 1440,
+      "height": 727
+    },
+    {
+      "src": "/assets/projects/government-appointment/survey-insights-2.jpg",
+      "alt": "AS-IS survey insights",
+      "width": 1440,
+      "height": 964
+    },
+    {
+      "src": "/assets/projects/government-appointment/04-as-is-testing-results.jpg",
+      "alt": "AS-IS usability testing results",
+      "width": 1440,
+      "height": 614
+    },
+    {
+      "src": "/assets/projects/government-appointment/03-mokcups.jpg",
+      "alt": "Redesigned My Visits mobile page",
+      "width": 1440,
+      "height": 937
+    },
+    {
+      "src": "/assets/projects/government-appointment/05-mockups.jpg",
+      "alt": "Appointment confirmation and interface controls",
+      "width": 1440,
+      "height": 881
+    },
+    {
+      "src": "/assets/projects/government-appointment/06.jpg",
+      "alt": "City of Lodz municipal office",
+      "width": 1440,
+      "height": 810
+    },
+    {
+      "src": "/assets/projects/government-appointment/key-07problems.jpg",
+      "alt": "Key UX problems and proposed improvements",
+      "width": 1440,
+      "height": 1072
+    },
+    {
+      "src": "/assets/projects/government-appointment/08-hipot.jpg",
+      "alt": "Redesign hypothesis",
+      "width": 1440,
+      "height": 244
+    },
+    {
+      "src": "/assets/projects/government-appointment/09-white-dark.jpg",
+      "alt": "Desktop light and high-contrast modes",
+      "width": 1440,
+      "height": 937
+    },
+    {
+      "src": "/assets/projects/government-appointment/010-typography-and-colors.jpg",
+      "alt": "Typography and color palette",
+      "width": 1440,
+      "height": 937
+    },
+    {
+      "src": "/assets/projects/government-appointment/011.jpg",
+      "alt": "Redesigned desktop My Visits page",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "src": "/assets/projects/government-appointment/012-mv.jpg",
+      "alt": "Mobile appointment details and cancellation",
+      "width": 1440,
+      "height": 1123
+    },
+    {
+      "src": "/assets/projects/government-appointment/013-mockups.jpg",
+      "alt": "Mobile service selection",
+      "width": 1440,
+      "height": 1123
+    },
+    {
+      "src": "/assets/projects/government-appointment/014-bc.jpg",
+      "alt": "Booking confirmation, PDF and calendar actions",
+      "width": 1440,
+      "height": 1123
+    },
+    {
+      "src": "/assets/projects/government-appointment/015-mockups.jpg",
+      "alt": "Desktop queue status and appointment availability",
+      "width": 1440,
+      "height": 937
+    },
+    {
+      "src": "/assets/projects/government-appointment/016.jpg",
+      "alt": "Redesign usability testing results",
+      "width": 1440,
+      "height": 614
+    },
+    {
+      "src": "/assets/projects/government-appointment/017.jpg",
+      "alt": "TO-BE survey insights",
+      "width": 1440,
+      "height": 573
+    },
+    {
+      "src": "/assets/projects/government-appointment/018.jpg",
+      "alt": "Redesign validation summary",
+      "width": 1440,
+      "height": 799
+    },
+    {
+      "src": "/assets/projects/government-appointment/019.jpg",
+      "alt": "Thank you for watching",
+      "width": 1440,
+      "height": 409
+    }
+  ],
+  "caseId": "government-appointment",
+  "categoryTitle": "Web Apps",
+  "socialImage": "/assets/projects/government-appointment/hero.jpg"
+}

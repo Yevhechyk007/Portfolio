@@ -1,0 +1,120 @@
+{
+  "layout": "layouts/case.njk",
+  "pageType": "case",
+  "tags": [
+    "project"
+  ],
+  "title": "Dripply — a quiet space to keep the places you love. — Yevhen Ivasiuk",
+  "description": "A habit-tracking mobile app built around small daily rituals — clean UI, quick logging, and a flow designed to feel effortless.",
+  "permalink": "/cases/dripply/",
+  "order": 1,
+  "project": {
+    "title": "Dripply — a quiet space to keep the places you love.",
+    "category": "mobile",
+    "href": "/cases/dripply/",
+    "cover": "/assets/projects/dripply/01hero.jpg",
+    "coverWebp": "/assets/projects/dripply/01hero.webp",
+    "summary": "A habit-tracking mobile app built around small daily rituals — clean UI, quick logging, and a flow designed to feel effortless.",
+    "badges": [
+      "Mobile App",
+      "UX/UI Design"
+    ],
+    "pills": [
+      "Mobile",
+      "UX/UI"
+    ],
+    "external": false,
+    "order": 1,
+    "cardClass": ""
+  },
+  "slides": [
+    {
+      "src": "/assets/projects/dripply/pre-about.jpg",
+      "webp": "/assets/projects/dripply/pre-about.webp",
+      "alt": "About Dripply",
+      "width": 1440,
+      "height": 1024
+    },
+    {
+      "src": "/assets/projects/dripply/solution-goal-challenge.jpg",
+      "webp": "/assets/projects/dripply/solution-goal-challenge.webp",
+      "alt": "Solution, Goal & Challenge",
+      "width": 1440,
+      "height": 1024
+    },
+    {
+      "src": "/assets/projects/dripply/design-process.jpg",
+      "webp": "/assets/projects/dripply/design-process.webp",
+      "alt": "Design Process",
+      "width": 1440,
+      "height": 788
+    },
+    {
+      "src": "/assets/projects/dripply/tasks-goals.jpg",
+      "webp": "/assets/projects/dripply/tasks-goals.webp",
+      "alt": "Tasks & Goals",
+      "width": 1440,
+      "height": 707
+    },
+    {
+      "src": "/assets/projects/dripply/mockups.jpg",
+      "webp": "/assets/projects/dripply/mockups.webp",
+      "alt": "Device Mockups",
+      "width": 1440,
+      "height": 1024
+    },
+    {
+      "src": "/assets/projects/dripply/wireframe-11.jpg",
+      "webp": "/assets/projects/dripply/wireframe-11.webp",
+      "alt": "Wireframes",
+      "width": 1440,
+      "height": 1027
+    },
+    {
+      "src": "/assets/projects/dripply/icons.jpg",
+      "webp": "/assets/projects/dripply/icons.webp",
+      "alt": "Icon System",
+      "width": 1440,
+      "height": 1024
+    },
+    {
+      "src": "/assets/projects/dripply/home-page.jpg",
+      "webp": "/assets/projects/dripply/home-page.webp",
+      "alt": "Home Page Design",
+      "width": 1440,
+      "height": 1027
+    },
+    {
+      "src": "/assets/projects/dripply/capturing-a-moment.jpg",
+      "webp": "/assets/projects/dripply/capturing-a-moment.webp",
+      "alt": "Usage in Context",
+      "width": 1440,
+      "height": 1027
+    },
+    {
+      "src": "/assets/projects/dripply/timeline.jpg",
+      "webp": "/assets/projects/dripply/timeline.webp",
+      "alt": "Project Timeline",
+      "width": 1440,
+      "height": 1027
+    },
+    {
+      "src": "/assets/projects/dripply/personal-story.jpg",
+      "webp": "/assets/projects/dripply/personal-story.webp",
+      "alt": "Personal Story",
+      "width": 1440,
+      "height": 1027
+    },
+    {
+      "src": "/assets/projects/dripply/thank-you-for-watching.jpg",
+      "webp": "/assets/projects/dripply/thank-you-for-watching.webp",
+      "alt": "Thank You",
+      "width": 1440,
+      "height": 409
+    }
+  ],
+  "caseId": "dripply",
+  "categoryTitle": "Mobile Apps",
+  "socialImage": "/assets/projects/dripply/01hero.jpg",
+  "nextProjectUrl": "https://www.behance.net/gallery/242541991/Frame-Personal-Finance-App"
+}

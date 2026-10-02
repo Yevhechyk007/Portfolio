@@ -1,0 +1,31 @@
+﻿:root {
+  --bg: #FFFFFF;
+  --fg: #0A0A0A;
+  --fg-secondary: #555555;
+  --card-bg: #F5F5F5;
+  --border: #D4D4D4;
+  --font: 'Sora', sans-serif;
+  --radius: 12px;
+  --max-w: 1400px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--fg); color: var(--bg); }
+
+
+.reveal { opacity: 1; transform: none; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.reveal-ready .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.reveal-ready .reveal.visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .reveal-ready .reveal { opacity: 1; transform: none; transition: none; } }

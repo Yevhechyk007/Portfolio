@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+pageType: case
+---
+<main class="case-page active" id="case-{{ caseId }}">
+<a class="back-btn" href="/projects/{{ project.category }}/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12L12 19M5 12L12 5"/></svg> Back to {{ categoryTitle }}</a>
+<h1 class="case-accessible-title">{{ project.title }}</h1>
+<div class="case-slides">{% for slide in slides %}{% include "components/case-slide.njk" %}{% endfor %}</div>
+{{ content | safe }}
+<div class="case-footer">
+{% if nextProjectUrl %}{% for entry in collections.projects %}{% if entry.data.project.href == nextProjectUrl %}{% set nextProject = entry.data.project %}{% include "components/next-case.njk" %}{% endif %}{% endfor %}{% endif %}
+{% include "components/contact-cta.njk" %}
+</div>
+</main>

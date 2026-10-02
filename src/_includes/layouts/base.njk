@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title or site.title }}</title>
+<meta name="description" content="{{ description or site.description }}">
+<meta name="author" content="Yevhen Ivasiuk">
+<meta property="og:title" content="{{ title or site.title }}">
+<meta property="og:description" content="{{ description or site.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}{{ socialImage or site.socialImage }}">
+{% if not socialImage %}<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">{% endif %}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title or site.title }}">
+<meta name="twitter:description" content="{{ description or site.description }}">
+<meta name="twitter:image" content="{{ site.url }}{{ socialImage or site.socialImage }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link rel="stylesheet" href="/assets/css/base.css">
+{% if pageType == "home" %}<link rel="stylesheet" href="/assets/css/home.css">{% endif %}
+{% if pageType == "case" %}<link rel="stylesheet" href="/assets/css/case.css">{% endif %}
+<link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+{% if pageType == "home" %}{% include "components/navigation.njk" %}{% endif %}
+{% include "components/netlify-form.njk" %}
+{{ content | safe }}
+{% include "components/contact-modal.njk" %}
+<script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

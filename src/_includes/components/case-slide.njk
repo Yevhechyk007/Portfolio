@@ -1,0 +1,1 @@
+{% if slide.webp %}<picture><source srcset="{{ slide.webp }}" type="image/webp">{% endif %}<img src="{{ slide.src }}" alt="{{ slide.alt }}" width="{{ slide.width }}" height="{{ slide.height }}" decoding="async" {% if not loop.first %}loading="lazy"{% endif %}>{% if slide.webp %}</picture>{% endif %}
